@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "title": "Diving Chia | Immersioni e Snorkeling a Chia, Sardegna del Sud dal 1996",
+    "description": "Esperienze premium di immersioni e snorkeling a Chia, Sardegna del Sud. Gruppi ridotti, avventure su misura dal 1996. Prenota la tua esperienza mediterranea."
+  },
+  "nav": {
+    "experiences": "Esperienze",
+    "courses": "Corsi",
+    "prices": "Prezzi",
+    "safety": "Sicurezza & Attrezzatura",
+    "gallery": "Galleria",
+    "faq": "FAQ",
+    "bookNow": "Prenota Ora"
+  },
+  "hero": {
+    "titleLine1": "Immersioni &",
+    "titleLine2": "Snorkeling",
+    "titleLine3": "in Sardegna del Sud",
+    "subtitle": "Piccoli gruppi, servizio premium ed esperienze marine su misura dal 1996. Scopri il mondo silenzioso del Mediterraneo con le nostre guide esperte.",
+    "ctaWhatsApp": "Prenota su WhatsApp",
+    "ctaAvailability": "Verifica Disponibilità",
+    "ctaExplore": "Esplora le Esperienze"
+  },
+  "trustbar": {
+    "since1996": "IMMERSIONI A CHIA DAL 1996",
+    "licensed": "CENTRO PADI/SSI CERTIFICATO",
+    "smallGroups": "SOLO PICCOLI GRUPPI",
+    "instructors": "ISTRUTTORI CERTIFICATI",
+    "safety": "SICUREZZA PRIMA DI TUTTO"
+  },
+  "services": {
+    "title": "Scegli la Tua Esperienza",
+    "subtitle": "Viaggi subacquei e marittimi curati per chi cerca l'extraordinario. Dalle certificazioni professionali alle immersioni sociali al tramonto.",
+    "items": {
+      "tryScuba": {
+        "badge": "Intro",
+        "title": "Prima Immersione",
+        "description": "Il tuo primo respiro sott'acqua. Nessuna licenza necessaria, solo curiosità.",
+        "price": "da €60/persona",
+        "discover": "Scopri"
+      },
+      "guidedDives": {
+        "badge": "Esperto",
+        "title": "Immersioni Guidate",
+        "description": "Per sub certificati. Pareti nascoste, canyon di granito, vita marina.",
+        "price": "da €45/persona",
+        "discover": "Scopri"
+      },
+      "snorkeling": {
+        "badge": "Tutti",
+        "title": "Snorkeling in Barca",
+        "description": "Calette cristalline accessibili solo dal mare. Perfetto per tutti.",
+        "price": "da €35/persona",
+        "discover": "Scopri"
+      },
+      "privateTours": {
+        "badge": "Privato",
+        "title": "Tour Privati & Custom",
+        "description": "Il tuo gruppo. I tuoi tempi. La tua Sardegna.",
+        "price": "Preventivo personalizzato",
+        "discover": "Scopri"
+      },
+      "sunset": {
+        "badge": "Social",
+        "title": "Tramonto in Barca",
+        "description": "L'ora d'oro sul mare. Aperitivo incluso.",
+        "price": "da €50/persona",
+        "discover": "Scopri"
+      },
+      "courses": {
+        "badge": "Certifica",
+        "title": "Corsi Sub",
+        "description": "Certificazioni PADI & SSI con istruttori locali esperti.",
+        "price": "Su richiesta",
+        "discover": "Scopri"
+      }
+    }
+  },
+  "usp": {
+    "title": "I Pilastri dell'Eccellenza",
+    "items": {
+      "0": { "label": "Dal 1996", "description": "Eredità Marittima" },
+      "1": { "label": "Protocollo Sicurezza", "description": "Attrezzatura controllata giornalmente" },
+      "2": { "label": "Piccoli Gruppi", "description": "Massima attenzione personale" },
+      "3": { "label": "Equipaggiamento Elite", "description": "Attrezzatura Scubapro e Mares" },
+      "4": { "label": "Esperienze Custom", "description": "Progettate per il tuo gruppo" },
+      "5": { "label": "Tour Snorkeling", "description": "Accesso a calette segrete" },
+      "6": { "label": "Conoscenza Locale", "description": "Conosciamo ogni barriera" },
+      "7": { "label": "Tutti i Livelli", "description": "Dalla prima immersione all'avanzato" }
+    }
+  },
+  "magazine": {
+    "label": "Viaggi su Misura",
+    "title": "Esperienze Private, Solo per Te",
+    "quote": "\"Crediamo che l'oceano sia vissuto al meglio in silenzio e solitudine.\"",
+    "description": "Progetta il tuo itinerario. Dalle sessioni private di snorkeling in grotte nascoste agli aperitivi celebrativi sotto le stelle del Mediterraneo.",
+    "cta": "Scopri i Charter Privati"
+  },
+  "testimonials": {
+    "items": {
+      "0": {
+        "text": "\"Il centro sub più professionale che abbia visitato in 20 anni di immersioni. Attrezzatura impeccabile.\"",
+        "author": "Julian W. — Londra"
+      },
+      "1": {
+        "text": "\"L'esperienza del tramonto in barca con vini sardi locali è stata il momento clou della nostra estate.\"",
+        "author": "Marco P. — Milano"
+      },
+      "2": {
+        "text": "\"Ci hanno portato in una grotta nascosta dove eravamo completamente soli. La magia esiste a Chia.\"",
+        "author": "Elena K. — Berlino"
+      }
+    }
+  },
+  "booking": {
+    "title": "Pronto a tuffarti?",
+    "ctaWhatsApp": "PRENOTA SU WHATSAPP",
+    "orCall": "O CHIAMACI: +39 338 858 5504"
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "items": {
+      "0": {
+        "q": "Serve la certificazione subacquea?",
+        "a": "Per le immersioni guidate sì, è richiesta una certificazione valida (PADI, SSI o equivalente). Per le esperienze Try Scuba e snorkeling non è necessaria alcuna esperienza precedente."
+      },
+      "1": {
+        "q": "I principianti possono partecipare?",
+        "a": "Assolutamente sì! Le nostre esperienze Try Scuba sono progettate appositamente per chi non ha mai immersioni. I nostri istruttori certificati vi accompagneranno passo dopo passo."
+      },
+      "2": {
+        "q": "Cosa succede se le condizioni marine sono avverse?",
+        "a": "La sicurezza è la nostra priorità assoluta. Se le condizioni marine non sono idonee, proponiamo un'alternativa o rimborsiamo l'intero importo."
+      },
+      "3": {
+        "q": "Cosa devo portare?",
+        "a": "Portate solo il costume da bagno, l'asciugamano e la protezione solare. Tutta l'attrezzatura subacquea è inclusa nelle nostre esperienze."
+      },
+      "4": {
+        "q": "L'attrezzatura è inclusa nel prezzo?",
+        "a": "Sì, tutta l'attrezzatura subacquea di alta qualità (Scubapro, Mares) è inclusa nel prezzo dell'esperienza."
+      },
+      "5": {
+        "q": "Quanto dura ogni esperienza?",
+        "a": "Le immersioni guidate durano circa 3-4 ore. Lo snorkeling dura circa 2-3 ore. L'esperienza tramonto dura circa 2 ore. I corsi hanno durata variabile."
+      },
+      "6": {
+        "q": "Dove ci incontriamo e da dove partiamo?",
+        "a": "Il punto d'incontro è presso il nostro centro a Chia, Domus de Maria. Forniamo indicazioni dettagliate al momento della prenotazione."
+      }
+    }
+  },
+  "gallery": {
+    "title": "Galleria",
+    "subtitle": "Momenti autentici dal mare della Sardegna del Sud",
+    "items": {
+      "chiSiamo": {
+        "tag": "Chi Siamo",
+        "title": "Nati dall'Amore per il Mare",
+        "body": "Nati dall'amore per il mare di un gruppo di istruttori esperti, il Diving Center Chia è oggi un punto di riferimento per gli appassionati di immersioni tra Chia e Capo Teulada. La nostra missione è trasformare le tue vacanze in Sardegna in un'esperienza memorabile, facendoti sentire parte di una grande famiglia subacquea fin dal primo momento. Il nostro team è composto da professionisti qualificati con anni di esperienza internazionale e una passione smisurata per l'oceano. Guidiamo ogni immersione con entusiasmo, attenzione e dedizione, mettendo la sicurezza e il comfort al primo posto. Dall'attrezzatura di altissima qualità ai briefing accurati prima di ogni tuffo, ogni dettaglio è pensato per offrirti il massimo. Crediamo nel potere emotivo del mare e nella magia di condividere queste sensazioni con i nostri ospiti."
+      },
+      "immersioni": {
+        "tag": "Immersioni",
+        "title": "Un Paradiso Sottomarino da Esplorare",
+        "body": "La costa di Chia è un paradiso sottomarino tutto da scoprire. Ogni immersione con noi è un viaggio unico attraverso paesaggi mozzafiato: pareti di roccia ricoperte di gorgonie, grotte misteriose e giardini di posidonia popolati da pesci variopinti. Le acque tra Chia e Capo Spartivento offrono una varietà straordinaria di siti — dalle secche brulicanti di vita ai relitti storici sul fondale, fino a vere montagne sommerse che emergono dalle distese bianche di sabbia. Le nostre guide esperte ti accompagneranno nei punti più spettacolari, scegliendo ogni giorno il percorso migliore in base alle condizioni del mare e al tuo livello. A bordo dei nostri gommoni, vivrai l'avventura in piccoli gruppi con tutta l'attenzione che meriti. Barracuda argentati, maestose cernie, curiosi polpi e, con un po' di fortuna, anche i delfini di passaggio potranno accompagnare le tue avventure."
+      },
+      "snorkeling": {
+        "tag": "Snorkeling & Aperitivo",
+        "title": "Il Tramonto sul Mare di Chia",
+        "body": "Immagina di salpare nel tardo pomeriggio, mentre il sole tramonta all'orizzonte dipingendo il cielo di oro e rosa. Le acque calme e cristalline di Chia ti accolgono per un bagno con maschera e boccaglio: tra rocce scolpite dal mare e pesci dai colori vivaci, lo snorkeling al tramonto ha un fascino indescrivibile. A bordo ti aspetta un aperitivo galleggiante indimenticabile: un brindisi con prosecco ghiacciato e degustazioni gourmet di specialità sarde, da gustare cullati dalle onde mentre il cielo si illumina di magia. Non è una semplice gita in barca, ma un vero viaggio sensoriale al tramonto. Il momento clou? L'ora d'oro in mezzo al mare, quando il sole tocca l'acqua e tutto intorno si illumina di riflessi dorati. Con un calice in mano e il cuore pieno di meraviglia, capirai di aver catturato l'essenza della Sardegna."
+      },
+      "corsi": {
+        "tag": "Corsi Sub",
+        "title": "La Porta verso Infinite Avventure",
+        "body": "Vuoi scoprire il mondo sottomarino da protagonista? I nostri corsi di immersione sono la porta verso infinite avventure, pensati sia per chi muove i primi passi sott'acqua sia per i sub esperti che vogliono migliorare. Siamo un centro multi-agenzia: offriamo certificazioni PADI, SSI e CMAS, una garanzia di qualità riconosciuta in tutto il mondo. Accogliamo i principianti assoluti con il Discover Scuba Diving, un'esperienza introduttiva in acque basse per sentire il brivido di respirare sott'acqua in totale sicurezza. Puoi poi proseguire con l'Open Water Diver, che ti qualifica fino a 18 metri in autonomia, e crescere con l'Advanced Open Water, i corsi di Specialità (deep diving, notturne, relitti, fotografia subacquea) e il Rescue Diver. Pensiamo anche ai più piccoli: con il Bubblemaker (dagli 8 anni) i bambini possono divertirsi nel mondo subacqueo in modo giocoso e protetto. I nostri istruttori pazienti e appassionati ti seguiranno passo dopo passo."
+      },
+      "eventi": {
+        "tag": "Eventi Speciali",
+        "title": "Momenti Esclusivi Creati per Te",
+        "body": "Stai cercando un'esperienza davvero esclusiva e su misura? Siamo qui per trasformare i tuoi sogni in realtà in un contesto unico: il mare di Chia al tramonto, una barca tutta per te, e momenti creati ad hoc solo per voi. Organizziamo eventi privati ed esperienze romantiche indimenticabili, con attenzione ai minimi dettagli. Dicci la tua idea e la trasformeremo in realtà: una proposta di matrimonio sott'acqua con l'anello consegnato sul fondo del mare? Una crociera al tramonto per te e la tua metà con champagne e musica soft per celebrare un anniversario speciale? Con il nostro gommone e il nostro team dedicato, puoi vivere il mare in totale privacy. Offriamo anche la possibilità di noleggiare la barca per eventi esclusivi: un tour personalizzato da regalare come sorpresa di nozze, un'esperienza su misura da aggiungere alla luna di miele, o una gita privata per stupire il partner con una dichiarazione d'amore in mare aperto."
+      },
+      "rental": {
+        "tag": "Noleggio Attrezzatura",
+        "title": "Viaggia Leggero, Pensiamo a Tutto Noi",
+        "body": "Viaggia leggero: pensiamo noi a tutta l'attrezzatura! Al Diving Center Chia disponiamo di un ampio parco attrezzature pronto per il noleggio, con completo equipaggiamento subacqueo dei migliori marchi (mute, BCD, regolatori, bombole, computer subacquei e tutto il necessario). Ogni componente è regolarmente ispezionato, sanificato e mantenuto in condizioni impeccabili, per assicurare immersioni confortevoli e sicure. Se hai bisogno di qualcosa, dal semplice boccaglio alla muta da 5mm, lo trovi da noi. Siamo dotati di una stazione di rifornimento all'avanguardia, con la possibilità di erogare miscele Nitrox al 32% e 36% per chi vuole immersioni più lunghe in totale sicurezza. Nel nostro dive shop trovi anche articoli in vendita e souvenir: puoi acquistare maschere e pinne da snorkeling, t-shirt e gadget firmati Diving Center Chia. Che tu sia un sub esperto con la tua attrezzatura o un principiante senza nulla in valigia, siamo pronti ad assisterti."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "IL MONDO SILENZIOSO DELLA SARDEGNA. CURATO DAL 1996.",
+    "experiences": "Esperienze",
+    "company": "Azienda",
+    "location": "Location",
+    "copyright": "© 2025 DIVING CHIA. ECCELLENZA MARITTIMA."
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "title": "Diving Chia | Tauchen und Schnorcheln in Chia, Südsardinien seit 1996",
+    "description": "Premium Tauch- und Schnorchelerlebnisse in Chia, Südsardinien. Kleine Gruppen, maßgeschneiderte Abenteuer seit 1996. Buchen Sie Ihr mediterranes Erlebnis."
+  },
+  "nav": {
+    "experiences": "Erlebnisse",
+    "courses": "Kurse",
+    "prices": "Preise",
+    "safety": "Sicherheit & Ausrüstung",
+    "gallery": "Galerie",
+    "faq": "FAQ",
+    "bookNow": "Jetzt Buchen"
+  },
+  "hero": {
+    "titleLine1": "Tauchen &",
+    "titleLine2": "Schnorcheln",
+    "titleLine3": "in Südsardinien",
+    "subtitle": "Kleine Gruppen, Premium-Service und maßgeschneiderte Meereserlebnisse seit 1996. Entdecken Sie die stille Welt des Mittelmeers mit unseren erfahrenen Meeresführern.",
+    "ctaWhatsApp": "Auf WhatsApp Buchen",
+    "ctaAvailability": "Verfügbarkeit Prüfen",
+    "ctaExplore": "Erlebnisse Entdecken"
+  },
+  "trustbar": {
+    "since1996": "TAUCHEN IN CHIA SEIT 1996",
+    "licensed": "PADI/SSI ZERTIFIZIERTES ZENTRUM",
+    "smallGroups": "NUR KLEINE GRUPPEN",
+    "instructors": "ZERTIFIZIERTE INSTRUKTOREN",
+    "safety": "SICHERHEIT ZUERST"
+  },
+  "services": {
+    "title": "Wähle Dein Erlebnis",
+    "subtitle": "Kuratierte Unterwasser- und Seereisen für diejenigen, die das Außergewöhnliche suchen. Von professionellen Zertifizierungen bis zu Sonnenuntergangstauchgängen.",
+    "items": {
+      "tryScuba": {
+        "badge": "Einstieg",
+        "title": "Schnuppertauchen",
+        "description": "Ihr erster Atemzug unter Wasser. Keine Lizenz nötig, nur Neugier.",
+        "price": "ab €60/Person",
+        "discover": "Entdecken"
+      },
+      "guidedDives": {
+        "badge": "Experte",
+        "title": "Geführte Tauchgänge",
+        "description": "Für zertifizierte Taucher. Versteckte Wände, Granitcanyons, Meeresleben.",
+        "price": "ab €45/Person",
+        "discover": "Entdecken"
+      },
+      "snorkeling": {
+        "badge": "Alle",
+        "title": "Schnorcheln per Boot",
+        "description": "Kristallklare Buchten, nur vom Meer aus erreichbar. Perfekt für alle.",
+        "price": "ab €35/Person",
+        "discover": "Entdecken"
+      },
+      "privateTours": {
+        "badge": "Privat",
+        "title": "Private & Custom Touren",
+        "description": "Ihre Gruppe. Ihr Tempo. Ihr Sardinien.",
+        "price": "Individuelles Angebot",
+        "discover": "Entdecken"
+      },
+      "sunset": {
+        "badge": "Social",
+        "title": "Sonnenuntergang per Boot",
+        "description": "Goldene Stunde auf dem Wasser. Aperitivo inklusive.",
+        "price": "ab €50/Person",
+        "discover": "Entdecken"
+      },
+      "courses": {
+        "badge": "Zertifizierung",
+        "title": "Tauchkurse",
+        "description": "PADI & SSI Zertifizierungen mit erfahrenen lokalen Instruktoren.",
+        "price": "Auf Anfrage",
+        "discover": "Entdecken"
+      }
+    }
+  },
+  "usp": {
+    "title": "Die Säulen der Exzellenz",
+    "items": {
+      "0": { "label": "Seit 1996", "description": "Maritimes Erbe" },
+      "1": { "label": "Sicherheitsprotokoll", "description": "Ausrüstung täglich geprüft" },
+      "2": { "label": "Kleine Gruppen", "description": "Maximale persönliche Betreuung" },
+      "3": { "label": "Elite-Ausrüstung", "description": "Scubapro und Mares Ausrüstung" },
+      "4": { "label": "Maßgeschneidert", "description": "Auf Ihre Gruppe zugeschnitten" },
+      "5": { "label": "Schnorchel-Touren", "description": "Zugang zu geheimen Buchten" },
+      "6": { "label": "Lokales Wissen", "description": "Wir kennen jedes Riff" },
+      "7": { "label": "Alle Level Willkommen", "description": "Vom ersten Tauchgang bis Fortgeschritten" }
+    }
+  },
+  "magazine": {
+    "label": "Maßgeschneiderte Reisen",
+    "title": "Private Erlebnisse, Nur für Sie",
+    "quote": "\"Wir glauben, dass der Ozean am besten in Stille und Einsamkeit erlebt wird.\"",
+    "description": "Gestalten Sie Ihre eigene Route. Von privaten Schnorchelsessions in versteckten Höhlen bis zu feierlichen Aperitifs unter den Sternen des Mittelmeers.",
+    "cta": "Mehr über Private Charter"
+  },
+  "testimonials": {
+    "items": {
+      "0": {
+        "text": "\"Das professionellste Tauchcenter, das ich in 20 Jahren Tauchen besucht habe. Makellose Ausrüstung.\"",
+        "author": "Julian W. — London"
+      },
+      "1": {
+        "text": "\"Die Sonnenuntergangserfahrung mit lokalen sardischen Weinen war das Highlight unseres Sommers.\"",
+        "author": "Marco P. — Mailand"
+      },
+      "2": {
+        "text": "\"Sie brachten uns in eine versteckte Höhle, wo wir völlig allein waren. Magie existiert in Chia.\"",
+        "author": "Elena K. — Berlin"
+      }
+    }
+  },
+  "booking": {
+    "title": "Bereit einzutauchen?",
+    "ctaWhatsApp": "AUF WHATSAPP BUCHEN",
+    "orCall": "ODER RUFEN SIE AN: +39 338 858 5504"
+  },
+  "faq": {
+    "title": "Häufig Gestellte Fragen",
+    "items": {
+      "0": {
+        "q": "Brauche ich eine Tauchzertifizierung?",
+        "a": "Für geführte Tauchgänge ja — eine gültige Zertifizierung (PADI, SSI oder gleichwertig) ist erforderlich. Für Try Scuba und Schnorcheln ist keine Vorerfahrung nötig."
+      },
+      "1": {
+        "q": "Können komplette Anfänger teilnehmen?",
+        "a": "Absolut! Unsere Try Scuba Erlebnisse sind speziell für diejenigen konzipiert, die noch nie getaucht sind. Unsere zertifizierten Instruktoren führen Sie Schritt für Schritt."
+      },
+      "2": {
+        "q": "Was passiert bei schlechten Meeresbedingungen?",
+        "a": "Sicherheit hat bei uns absolute Priorität. Bei ungeeigneten Bedingungen bieten wir eine Alternative an oder erstatten den vollen Betrag."
+      },
+      "3": {
+        "q": "Was sollte ich mitbringen?",
+        "a": "Bringen Sie einfach Badebekleidung, Handtuch und Sonnenschutz mit. Die gesamte Tauchausrüstung ist in unseren Erlebnissen inklusive."
+      },
+      "4": {
+        "q": "Ist die Ausrüstung im Preis inbegriffen?",
+        "a": "Ja, die gesamte hochwertige Tauchausrüstung (Scubapro, Mares) ist im Preis des Erlebnisses inklusive."
+      },
+      "5": {
+        "q": "Wie lange dauert jedes Erlebnis?",
+        "a": "Geführte Tauchgänge dauern etwa 3-4 Stunden. Schnorcheln dauert etwa 2-3 Stunden. Die Sonnenuntergangserfahrung dauert etwa 2 Stunden. Kurse haben variable Dauer."
+      },
+      "6": {
+        "q": "Wo treffen wir uns und von wo starten wir?",
+        "a": "Der Treffpunkt ist in unserem Zentrum in Chia, Domus de Maria. Wir geben Ihnen bei der Buchung detaillierte Anfahrtsbeschreibungen."
+      }
+    }
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Authentische Momente vom Meer Südsardiniens",
+    "items": {
+      "chiSiamo": {
+        "tag": "Über Uns",
+        "title": "Aus der Liebe zum Meer geboren",
+        "body": "Aus der Liebe zum Meer einer Gruppe erfahrener Instruktoren hervorgegangen, ist das Diving Center Chia heute eine Referenz für Tauchenthusiasten zwischen Chia und Capo Teulada. Unsere Mission ist es, Ihren Urlaub in Sardinien in ein unvergessliches Erlebnis zu verwandeln und Sie vom ersten Moment an Teil einer großen Unterwasserfamilie zu machen. Unser Team besteht aus qualifizierten Fachleuten mit jahrelanger internationaler Erfahrung und einer grenzenlosen Leidenschaft für den Ozean. Wir führen jeden Tauchgang mit Begeisterung, Aufmerksamkeit und Hingabe durch und stellen Sicherheit und Komfort an erste Stelle. Von der hochwertigsten Ausrüstung bis zu den genauen Briefings vor jedem Tauchgang — jedes Detail ist darauf ausgelegt, Ihnen das Beste zu bieten."
+      },
+      "immersioni": {
+        "tag": "Tauchen",
+        "title": "Ein Unterwasserparadies zum Entdecken",
+        "body": "Die Küste von Chia ist ein Unterwasserparadies, das darauf wartet, entdeckt zu werden. Jeder Tauchgang mit uns ist eine einzigartige Reise durch atemberaubende Unterwasserlandschaften: Sie können an Felswänden entlangschwimmen, die mit Gorgonien bedeckt sind, mysteriöse Höhlen erkunden und über Posidoniengärten voller bunter Fische gleiten. Die Gewässer zwischen Chia und Capo Spartivento bieten eine außerordentliche Vielfalt an Tauchstellen — von Untiefen voller Leben bis zu historischen Wracks auf dem Meeresgrund, bis hin zu echten versunkenen Bergen, die aus den weißen Sandflächen in den kristallklaren Gewässern Sardiniens aufragen. Silberne Barrakudas, majestätische Zackenbarsche, neugierige Oktopusse und mit etwas Glück sogar vorbeiziehende Delfine können Ihre Abenteuer begleiten."
+      },
+      "snorkeling": {
+        "tag": "Schnorcheln & Aperitivo",
+        "title": "Sonnenuntergang auf dem Meer von Chia",
+        "body": "Stellen Sie sich vor, wie Sie am späten Nachmittag in See stechen, während die Sonne am Horizont untergeht und den Himmel in Gold und Rosa taucht. Die ruhigen und kristallklaren Gewässer von Chia laden Sie zu einem erfrischenden Schwimmen mit Maske und Schnorchel ein: zwischen vom Meer geformten Felsen und bunt gefärbten Fischen hat das Schnorcheln bei Sonnenuntergang einen unvergleichlichen Charme. Zurück an Bord erwartet Sie ein unvergessliches schwimmendes Aperitivo: ein Toast mit eisgekühltem Prosecco und Gourmet-Kostproben sardischer Spezialitäten, den Sie vom Wellengang gewiegt genießen können, während der Himmel magisch leuchtet. Der Höhepunkt? Die goldene Stunde mitten auf dem Meer, wenn die Sonne das Wasser berührt und alles rings um Sie in goldenem Glanz erstrahlt."
+      },
+      "corsi": {
+        "tag": "Tauchkurse",
+        "title": "Das Tor zu unendlichen Abenteuern",
+        "body": "Möchten Sie die Unterwasserwelt als Protagonist entdecken? Unsere Tauchkurse sind das Tor zu unendlichen Abenteuern, konzipiert sowohl für diejenigen, die ihre ersten Schritte unter Wasser machen, als auch für erfahrene Taucher, die sich verbessern möchten. Wir sind ein Multi-Agentur-Ausbildungszentrum: Wir bieten PADI-, SSI- und CMAS-zertifizierte Kurse an, eine Qualitätsgarantie mit weltweit anerkannten Zertifizierungen. Wir empfangen absolute Anfänger mit dem Discover Scuba Diving, einer Einführungserfahrung in flachem Wasser, um den Nervenkitzel des Atmens unter Wasser in völliger Sicherheit zu erleben. Sie können dann mit dem Open Water Diver-Kurs fortfahren und mit dem Advanced Open Water, den Spezialkursen (wie Tieftauchen, Nachttauchen, Wracks, Unterwasserfotografie und mehr) und dem Rescue Diver weiterwachsen."
+      },
+      "eventi": {
+        "tag": "Besondere Events",
+        "title": "Exklusive Momente nur für Sie",
+        "body": "Suchen Sie ein wirklich exklusives und maßgeschneidertes Erlebnis? Wir sind hier, um Ihre Träume in einem einzigartigen Rahmen wahr werden zu lassen: das Meer von Chia beim Sonnenuntergang, ein Boot ganz für Sie, und Momente, die speziell nur für Sie geschaffen wurden. Wir organisieren private Veranstaltungen und unvergessliche romantische Erlebnisse, mit Aufmerksamkeit für die kleinsten Details. Sagen Sie uns Ihre Idee, und wir werden sie verwirklichen: Was halten Sie von einem Heiratsantrag unter Wasser, mit einem Ring, der auf dem Meeresgrund übergeben wird? Oder eine Sonnenuntergangskreuzfahrt nur für Sie und Ihre bessere Hälfte, mit Champagner und sanfter Musik, um einen besonderen Jahrestag zu feiern? Wir organisieren auch einzigartige Geburtstagspartys, ausgefallene JGA-Feiern oder sogar Corporate Team-Building-Aktivitäten in der Natur — immer mit dem Hauch Magie, den nur Sardinien geben kann."
+      },
+      "rental": {
+        "tag": "Ausrüstungsverleih",
+        "title": "Reisen Sie leicht — Wir kümmern uns um alles",
+        "body": "Reisen Sie leicht: Wir kümmern uns um die gesamte Ausrüstung! Im Diving Center Chia verfügen wir über einen großen Ausrüstungspark für den Verleih, mit kompletter Tauchausrüstung der besten Marken (Neoprenanzüge, BCDs, Regulatoren, Tanks, Tauchcomputer und alles, was Sie brauchen). Jede Komponente wird regelmäßig inspiziert, desinfiziert und in einwandfreiem Zustand gehalten, um komfortable und sichere Tauchgänge zu gewährleisten. Was auch immer Sie benötigen, vom einfachen Schnorchel bis zum 5-mm-Neoprenanzug, Sie werden es bei uns finden. Wir sind mit einer hochmodernen Füllstation ausgestattet, einschließlich der Möglichkeit, Tanks mit 32%- und 36%-Nitrox-Gemischen zu füllen. In unserem Dive Shop finden Sie auch Artikel zum Kauf und Souvenirs: Schnorchelmasken und Flossen, T-Shirts und Gadgets von Diving Center Chia."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "DIE STILLE WELT SARDINIENS. SEIT 1996 KURIERT.",
+    "experiences": "Erlebnisse",
+    "company": "Unternehmen",
+    "location": "Standort",
+    "copyright": "© 2025 DIVING CHIA. MARITIME EXZELLENZ."
+  }
+}

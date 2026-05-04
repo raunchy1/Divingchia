@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "title": "Diving Chia | Diving and Snorkeling in Chia, South Sardinia since 1996",
+    "description": "Premium diving and snorkeling experiences in Chia, South Sardinia. Small groups, tailor-made adventures since 1996. Book your Mediterranean experience."
+  },
+  "nav": {
+    "experiences": "Experiences",
+    "courses": "Courses",
+    "prices": "Prices",
+    "safety": "Safety & Equipment",
+    "gallery": "Gallery",
+    "faq": "FAQ",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "titleLine1": "Diving &",
+    "titleLine2": "Snorkeling",
+    "titleLine3": "in South Sardinia",
+    "subtitle": "Small groups, premium service and tailor-made sea experiences since 1996. Discover the silent world of the Mediterranean with our expert maritime guides.",
+    "ctaWhatsApp": "Book on WhatsApp",
+    "ctaAvailability": "Check Availability",
+    "ctaExplore": "Explore Experiences"
+  },
+  "trustbar": {
+    "since1996": "DIVING IN CHIA SINCE 1996",
+    "licensed": "LICENSED PADI/SSI CENTER",
+    "smallGroups": "SMALL GROUPS ONLY",
+    "instructors": "CERTIFIED INSTRUCTORS",
+    "safety": "SAFETY FIRST"
+  },
+  "services": {
+    "title": "Choose Your Experience",
+    "subtitle": "Curated underwater and maritime journeys designed for those who seek the extraordinary. From professional certifications to sunset social dives.",
+    "items": {
+      "tryScuba": {
+        "badge": "Intro",
+        "title": "Try Scuba",
+        "description": "Your first breath underwater. No license needed, just curiosity.",
+        "price": "from €60/person",
+        "discover": "Discover"
+      },
+      "guidedDives": {
+        "badge": "Expert",
+        "title": "Guided Dives",
+        "description": "For certified divers. Hidden walls, granite canyons, marine life.",
+        "price": "from €45/person",
+        "discover": "Discover"
+      },
+      "snorkeling": {
+        "badge": "Everyone",
+        "title": "Snorkeling Boat Experience",
+        "description": "Crystal coves accessible only by sea. Perfect for everyone.",
+        "price": "from €35/person",
+        "discover": "Discover"
+      },
+      "privateTours": {
+        "badge": "Private",
+        "title": "Private & Custom Tours",
+        "description": "Your group. Your pace. Your Sardinia.",
+        "price": "Custom quote",
+        "discover": "Discover"
+      },
+      "sunset": {
+        "badge": "Social",
+        "title": "Sunset Boat Experience",
+        "description": "Golden hour on the water. Aperitivo included.",
+        "price": "from €50/person",
+        "discover": "Discover"
+      },
+      "courses": {
+        "badge": "Certify",
+        "title": "Diving Courses",
+        "description": "PADI & SSI certifications with expert local instructors.",
+        "price": "On request",
+        "discover": "Discover"
+      }
+    }
+  },
+  "usp": {
+    "title": "The Pillars of Excellence",
+    "items": {
+      "0": { "label": "Since 1996", "description": "Maritime Heritage" },
+      "1": { "label": "Safety Protocol", "description": "Equipment checked daily" },
+      "2": { "label": "Small Groups", "description": "Maximum personal attention" },
+      "3": { "label": "Elite Equipment", "description": "Scubapro and Mares gear" },
+      "4": { "label": "Custom Experiences", "description": "Built around your group" },
+      "5": { "label": "Boat Snorkeling Tours", "description": "Access secret coves" },
+      "6": { "label": "Local Knowledge", "description": "We know every reef" },
+      "7": { "label": "All Levels Welcome", "description": "From first dive to advanced" }
+    }
+  },
+  "magazine": {
+    "label": "Bespoke Journeys",
+    "title": "Private Experiences, Just for You",
+    "quote": "\"We believe the ocean is best experienced in silence and solitude.\"",
+    "description": "Design your own itinerary. From private snorkeling sessions in hidden caves to celebratory aperitifs under the Mediterranean stars.",
+    "cta": "Learn About Private Charters"
+  },
+  "testimonials": {
+    "items": {
+      "0": {
+        "text": "\"The most professional dive center I have visited in 20 years of diving. Impeccable equipment.\"",
+        "author": "Julian W. — London"
+      },
+      "1": {
+        "text": "\"The sunset boat experience with local Sardinian wines was the highlight of our summer.\"",
+        "author": "Marco P. — Milan"
+      },
+      "2": {
+        "text": "\"They took us to a hidden cave where we were completely alone. Magic exists in Chia.\"",
+        "author": "Elena K. — Berlin"
+      }
+    }
+  },
+  "booking": {
+    "title": "Ready to dive in?",
+    "ctaWhatsApp": "BOOK ON WHATSAPP",
+    "orCall": "OR CALL US: +39 338 858 5504"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "0": {
+        "q": "Do I need a diving certification?",
+        "a": "For guided dives, yes — a valid certification (PADI, SSI or equivalent) is required. For Try Scuba and snorkeling experiences, no previous experience is needed."
+      },
+      "1": {
+        "q": "Can complete beginners participate?",
+        "a": "Absolutely! Our Try Scuba experiences are specifically designed for those who have never dived before. Our certified instructors will guide you step by step."
+      },
+      "2": {
+        "q": "What happens if sea conditions are bad?",
+        "a": "Safety is our absolute priority. If sea conditions are not suitable, we offer an alternative or refund the full amount."
+      },
+      "3": {
+        "q": "What should I bring?",
+        "a": "Just bring your swimsuit, towel and sun protection. All diving equipment is included in our experiences."
+      },
+      "4": {
+        "q": "Is equipment included in the price?",
+        "a": "Yes, all high-quality diving equipment (Scubapro, Mares) is included in the price of the experience."
+      },
+      "5": {
+        "q": "How long does each experience last?",
+        "a": "Guided dives last about 3-4 hours. Snorkeling lasts about 2-3 hours. The sunset experience lasts about 2 hours. Courses have variable duration."
+      },
+      "6": {
+        "q": "Where do we meet and depart from?",
+        "a": "The meeting point is at our center in Chia, Domus de Maria. We provide detailed directions upon booking."
+      }
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Authentic moments from the sea of South Sardinia",
+    "items": {
+      "chiSiamo": {
+        "tag": "About Us",
+        "title": "Born from Love for the Sea",
+        "body": "Born from the love for the sea of a group of expert instructors, Diving Center Chia is today a point of reference for diving enthusiasts between Chia and Capo Teulada. Our mission is to transform your holiday in Sardinia into a memorable experience, making you feel part of a large underwater family from the very first moment. Our team is made up of qualified professionals with years of international experience and a boundless passion for the ocean. We guide each dive with enthusiasm, attention and dedication, putting safety and comfort first. From the highest quality equipment to the accurate briefings before each dive, every detail is designed to offer you the best. We believe in the emotional power of the sea and in the magic of sharing these sensations with our guests."
+      },
+      "immersioni": {
+        "tag": "Diving",
+        "title": "An Underwater Paradise to Explore",
+        "body": "The coast of Chia is an underwater paradise just waiting to be explored. Every dive with us is a unique journey through breathtaking underwater landscapes: you can swim along rock walls covered with gorgonians, explore mysterious caves and glide over posidonia gardens populated by colorful fish. The waters between Chia and Capo Spartivento offer an extraordinary variety of sites: from shallows teeming with life to historic wrecks lying on the seabed, to real submerged mountains that rise from the white expanses of sand in the crystalline waters of Sardinia. Our expert guides will lead you safely to the most spectacular spots, choosing the best itinerary every day based on sea conditions and your level. Silvery barracudas, majestic groupers, curious octopuses and, with a bit of luck, even passing dolphins can accompany your adventures."
+      },
+      "snorkeling": {
+        "tag": "Snorkeling & Aperitivo",
+        "title": "Sunset on the Sea of Chia",
+        "body": "Imagine setting sail in the late afternoon, as the sun sets on the horizon, painting the sky gold and pink. The calm and crystalline waters of Chia welcome you for a refreshing swim with a mask and snorkel: among rocks sculpted by the sea and brightly colored fish, sunset snorkeling has an indescribable charm. Back on board, an unforgettable floating aperitif awaits you: a toast with iced prosecco and gourmet tastings of Sardinian specialties, to be enjoyed lulled by the waves while the sky lights up with magic. It is not a simple boat trip, but a true sensory journey at sunset. The highlight? The golden hour in the middle of the sea, when the sun touches the water and everything around lights up with golden reflections. With a glass in your hand and your heart full of wonder, you will understand that you have captured the essence of Sardinia."
+      },
+      "corsi": {
+        "tag": "Diving Courses",
+        "title": "The Gateway to Endless Adventures",
+        "body": "Do you want to discover the underwater world as a protagonist? Our scuba diving courses are the gateway to endless adventures, designed for both those taking their first steps underwater and for expert divers who want to improve. We are a multi-agency training center: we offer PADI, SSI and CMAS certified courses, a guarantee of quality and certifications recognized all over the world. We welcome absolute beginners with the Discover Scuba Diving, an introductory experience in shallow waters to experience the thrill of breathing underwater in complete safety. You can then continue with the Open Water Diver course, which qualifies you to dive up to 18 meters independently, and continue to grow with the Advanced Open Water, the Specialty courses (such as deep diving, night diving, wrecks, underwater photography and more) and the Rescue Diver. We also think of the little ones: with the Bubblemaker program (from 8 years old) children can have fun discovering the underwater environment in a playful and protected way."
+      },
+      "eventi": {
+        "tag": "Special Events",
+        "title": "Exclusive Moments Created for You",
+        "body": "Are you looking for a truly exclusive and tailor-made experience? We are here to make your dreams come true in a unique setting: the sea of Chia at sunset, a boat all for you, and moments created ad hoc just for you. We organize private events and unforgettable romantic experiences, with attention to the smallest details. Tell us your idea, and we will turn it into reality: how about an underwater marriage proposal, complete with a ring delivered to the bottom of the sea? Or a sunset cruise just for you and your better half, with champagne and soft music to celebrate a special anniversary? We also organize unique birthday parties, out-of-the-ordinary hen/stag parties or even corporate team building activities immersed in nature — always with that touch of magic that only Sardinia can give. Every detail will be arranged according to your wishes."
+      },
+      "rental": {
+        "tag": "Equipment Rental",
+        "title": "Travel Light, We Take Care of Everything",
+        "body": "Travel light: we'll take care of all the equipment! At Diving Center Chia we have a large equipment park ready for rental, with complete scuba gear from the best brands (wetsuits, BCDs, regulators, tanks, dive computers and everything you need). Each component is regularly inspected, sanitized and maintained in impeccable condition, to ensure comfortable and safe dives. If you need anything, from a simple snorkel to a 5-mm wetsuit, you'll find it with us. We are equipped with a cutting-edge refill station, including the possibility of filling tanks with 32% and 36% Nitrox mixes for those who want longer dives in complete safety. In our dive shop you will also find items for sale and souvenirs: you can buy snorkeling masks and fins, t-shirts and gadgets signed Diving Center Chia. Whether you are an expert diver with your own equipment or a beginner with nothing in your suitcase, we are ready to provide you with everything you need."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "THE SILENT WORLD OF SARDINIA. CURATED SINCE 1996.",
+    "experiences": "Experiences",
+    "company": "Company",
+    "location": "Location",
+    "copyright": "© 2025 DIVING CHIA. MARITIME EXCELLENCE."
+  }
+}
