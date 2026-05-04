@@ -51,21 +51,21 @@ export default function GalleryPage() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[60vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end overflow-hidden">
         <img
           src="/images/hero-chia.jpg"
           alt="Chia, Sardegna del Sud"
           className="absolute inset-0 w-full h-full object-cover brightness-[0.55]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#000d22]/80 via-[#000d22]/20 to-transparent" />
-        <div className="relative z-10 px-8 md:px-16 pb-20 pt-40 max-w-[1440px] w-full mx-auto">
-          <span className="font-serif text-xs tracking-[0.2em] uppercase text-[#E8DCC8] mb-4 block">
+        <div className="relative z-10 px-5 md:px-16 pb-12 md:pb-20 pt-28 md:pt-40 max-w-[1440px] w-full mx-auto">
+          <span className="font-serif text-xs tracking-[0.2em] uppercase text-[#E8DCC8] mb-3 md:mb-4 block">
             Diving Chia
           </span>
-          <h1 className="font-serif text-white text-5xl md:text-7xl font-normal leading-[1.05] mb-6">
+          <h1 className="font-serif text-white text-4xl md:text-7xl font-normal leading-[1.05] mb-4 md:mb-6">
             {t("title")}
           </h1>
-          <p className="font-serif text-white/70 text-lg md:text-xl max-w-xl leading-relaxed">
+          <p className="font-serif text-white/70 text-base md:text-xl max-w-xl leading-relaxed">
             {t("subtitle")}
           </p>
         </div>
@@ -77,33 +77,33 @@ export default function GalleryPage() {
           const isEven = index % 2 === 0;
           return (
             <ScrollReveal key={key} delay={0.1}>
-              <article className={`grid grid-cols-1 md:grid-cols-2 min-h-[600px] ${index > 0 ? "border-t border-[#E8DCC8]" : ""}`}>
-                {/* Image */}
+              <article className={`grid grid-cols-1 md:grid-cols-2 min-h-[460px] md:min-h-[600px] ${index > 0 ? "border-t border-[#E8DCC8]" : ""}`}>
+                {/* Image — always on top on mobile */}
                 <div className={`relative overflow-hidden ${isEven ? "md:order-1" : "md:order-2"}`}>
                   <img
                     src={img}
                     alt={t(`items.${key}.title`)}
-                    className="w-full h-full object-cover min-h-[400px] md:min-h-[600px] hover:scale-[1.02] transition-transform duration-700"
+                    className="w-full h-full object-cover min-h-[260px] md:min-h-[600px] hover:scale-[1.02] transition-transform duration-700"
                   />
                   {/* Tag badge */}
-                  <div className="absolute top-6 left-6 bg-[#0a2342]/80 backdrop-blur-sm px-4 py-1.5">
-                    <span className="font-serif text-[11px] tracking-[0.15em] uppercase text-white">
+                  <div className="absolute top-3 left-3 md:top-6 md:left-6 bg-[#0a2342]/80 backdrop-blur-sm px-3 py-1 md:px-4 md:py-1.5">
+                    <span className="font-serif text-[10px] md:text-[11px] tracking-[0.15em] uppercase text-white">
                       {t(`items.${key}.tag`)}
                     </span>
                   </div>
                 </div>
 
                 {/* Text */}
-                <div className={`flex flex-col justify-center px-8 py-16 md:px-14 lg:px-20 ${isEven ? "md:order-2" : "md:order-1"}`}>
-                  <span className="font-serif text-[11px] tracking-[0.15em] uppercase text-[#006689] mb-5 block">
+                <div className={`flex flex-col justify-center px-5 py-8 md:px-14 md:py-16 lg:px-20 ${isEven ? "md:order-2" : "md:order-1"}`}>
+                  <span className="font-serif text-[11px] tracking-[0.15em] uppercase text-[#006689] mb-3 md:mb-5 block">
                     {t(`items.${key}.tag`)}
                   </span>
 
-                  <h2 className="font-serif text-[#000d22] text-3xl md:text-4xl font-normal leading-[1.2] mb-6">
+                  <h2 className="font-serif text-[#000d22] text-2xl md:text-4xl font-normal leading-[1.2] mb-4 md:mb-6">
                     {t(`items.${key}.title`)}
                   </h2>
 
-                  <div className="w-16 h-px bg-[#E8DCC8] mb-8" />
+                  <div className="w-12 md:w-16 h-px bg-[#E8DCC8] mb-5 md:mb-8" />
 
                   <p className="text-[#44474e] text-base leading-[1.85] mb-8">
                     {t(`items.${key}.body`)}

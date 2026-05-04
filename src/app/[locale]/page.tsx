@@ -74,7 +74,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           1. FULL-BLEED HERO
           ═══════════════════════════════════════════ */}
-      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={IMG.hero}
@@ -83,33 +83,33 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#000d22]/40 via-transparent to-[#000d22]/60" />
         </div>
-        <div className="relative z-10 px-8 md:px-16 max-w-5xl text-center">
-          <h1 className="font-serif text-white mb-8 leading-[1.05] text-5xl md:text-7xl lg:text-[96px] font-normal">
+        <div className="relative z-10 px-6 md:px-16 max-w-5xl text-center w-full pt-24 pb-16 md:pt-0 md:pb-0">
+          <h1 className="font-serif text-white mb-6 md:mb-8 leading-[1.08] text-[clamp(2.4rem,8vw,6rem)] font-normal">
             {heroT("titleLine1")}<br />
             {heroT("titleLine2")}<br />
             {heroT("titleLine3")}
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-light px-2">
             {heroT("subtitle")}
           </p>
-          <div className="flex flex-wrap gap-6 items-center justify-center">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-6 items-center justify-center w-full px-2">
             <a
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#0a2342] text-white px-10 py-5 font-serif text-xs tracking-[0.1em] uppercase hover:bg-[#006689] transition-colors"
+              className="w-full sm:w-auto bg-[#0a2342] text-white px-8 py-4 font-serif text-xs tracking-[0.1em] uppercase hover:bg-[#006689] transition-colors text-center"
             >
               {heroT("ctaWhatsApp")}
             </a>
             <Link
               href={lp("/#esperienze")}
-              className="border border-white text-white px-10 py-5 font-serif text-xs tracking-[0.1em] uppercase hover:bg-white hover:text-[#000d22] transition-all"
+              className="w-full sm:w-auto border border-white text-white px-8 py-4 font-serif text-xs tracking-[0.1em] uppercase hover:bg-white hover:text-[#000d22] transition-all text-center"
             >
               {heroT("ctaAvailability")}
             </Link>
             <Link
               href={lp("/#esperienze")}
-              className="font-serif text-xs tracking-[0.1em] text-white flex items-center gap-2 group uppercase"
+              className="hidden sm:flex font-serif text-xs tracking-[0.1em] text-white items-center gap-2 group uppercase"
             >
               {heroT("ctaExplore")}
               <span className="text-sm group-hover:translate-x-2 transition-transform">→</span>
@@ -139,9 +139,9 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           3. SERVICES (3x2 Grid)
           ═══════════════════════════════════════════ */}
-      <section id="esperienze" className="px-8 md:px-16 py-32 max-w-[1440px] mx-auto">
-        <ScrollReveal className="flex flex-col items-center mb-20 text-center">
-          <h2 className="font-serif text-[#000d22] mb-4 text-4xl md:text-5xl font-normal">{svcT("title")}</h2>
+      <section id="esperienze" className="px-5 md:px-16 py-16 md:py-32 max-w-[1440px] mx-auto">
+        <ScrollReveal className="flex flex-col items-center mb-10 md:mb-20 text-center">
+          <h2 className="font-serif text-[#000d22] mb-4 text-3xl md:text-5xl font-normal">{svcT("title")}</h2>
           <div className="editorial-rule max-w-[200px] mb-6" />
           <p className="text-base text-[#44474e] max-w-2xl leading-relaxed">{svcT("subtitle")}</p>
         </ScrollReveal>
@@ -184,12 +184,12 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           4. WHY CHOOSE US (8 Pillars)
           ═══════════════════════════════════════════ */}
-      <section className="bg-[#F8F6F1] px-8 md:px-16 py-24">
+      <section className="bg-[#F8F6F1] px-5 md:px-16 py-14 md:py-24">
         <div className="max-w-[1440px] mx-auto">
-          <h2 className="font-serif text-[#000d22] text-center mb-20 uppercase tracking-widest text-3xl md:text-4xl font-normal">
+          <h2 className="font-serif text-[#000d22] text-center mb-10 md:mb-20 uppercase tracking-widest text-2xl md:text-4xl font-normal">
             {uspT("title")}
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-16 gap-x-6 md:gap-x-12">
             {USP_ICONS.map((icon, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="flex flex-col items-center text-center">
@@ -215,7 +215,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           5. MAGAZINE SPREAD
           ═══════════════════════════════════════════ */}
-      <section className="py-32 overflow-hidden">
+      <section className="py-16 md:py-32 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-0 items-center">
           <div className="md:col-span-7 aspect-[16/9] overflow-hidden">
             <img
@@ -224,7 +224,7 @@ export default function HomePage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="md:col-span-5 px-8 md:px-16 py-12">
+          <div className="md:col-span-5 px-5 md:px-16 py-10 md:py-12">
             <div className="max-w-md">
               <span className="font-serif text-xs tracking-[0.1em] uppercase text-[#006689] mb-4 block">
                 {magT("label")}
@@ -252,7 +252,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           6. TESTIMONIALS (Google Reviews)
           ═══════════════════════════════════════════ */}
-      <section className="bg-white px-8 md:px-16 py-32">
+      <section className="bg-white px-5 md:px-16 py-16 md:py-32">
         <div className="max-w-[1440px] mx-auto">
 
           {/* Google Rating Badge */}
@@ -276,10 +276,10 @@ export default function HomePage() {
           </ScrollReveal>
 
           {/* Review Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mb-10 md:mb-14">
             {[0, 1, 2].map((i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="border border-[#E8DCC8] p-8 md:p-10 flex flex-col h-full">
+                <div className="border border-[#E8DCC8] p-6 md:p-10 flex flex-col h-full">
                   {/* Stars */}
                   <div className="flex gap-1 text-[#FFD700] mb-5">
                     {[1,2,3,4,5].map((s) => (
@@ -414,11 +414,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           7. BOOKING STRIP
           ═══════════════════════════════════════════ */}
-      <section className="bg-[#0a2342] py-32 px-8 md:px-16 text-center">
-        <h2 className="font-serif text-white mb-12 text-5xl md:text-7xl lg:text-[84px] font-normal leading-[1.1]">
+      <section className="bg-[#0a2342] py-20 md:py-32 px-5 md:px-16 text-center">
+        <h2 className="font-serif text-white mb-8 md:mb-12 text-[clamp(2.5rem,8vw,5.25rem)] font-normal leading-[1.1]">
           {bookT("title")}
         </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
           <a
             href={getWhatsAppLink()}
             target="_blank"
@@ -439,8 +439,8 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           8. FAQ
           ═══════════════════════════════════════════ */}
-      <section className="px-8 md:px-16 py-32 max-w-4xl mx-auto">
-        <h2 className="font-serif text-[#000d22] text-center mb-16 text-3xl md:text-4xl font-normal">
+      <section className="px-5 md:px-16 py-16 md:py-32 max-w-4xl mx-auto">
+        <h2 className="font-serif text-[#000d22] text-center mb-10 md:mb-16 text-2xl md:text-4xl font-normal">
           {faqT("title")}
         </h2>
         <div className="space-y-2">

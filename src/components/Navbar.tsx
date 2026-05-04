@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100">
-        <nav className="flex justify-between items-center px-6 md:px-16 h-20 md:h-24 w-full max-w-[1440px] mx-auto">
+        <nav className="flex justify-between items-center px-5 md:px-16 h-16 md:h-24 w-full max-w-[1440px] mx-auto">
           {/* Logo */}
           <Link
             href={`/${locale}`}
