@@ -97,20 +97,40 @@
     "cta": "Learn About Private Charters"
   },
   "testimonials": {
+    "rating": "4.9",
+    "count": "272",
+    "platform": "Google Reviews",
+    "readAll": "Read all 272 reviews on Google",
     "items": {
       "0": {
-        "text": "\"The most professional dive center I have visited in 20 years of diving. Impeccable equipment.\"",
-        "author": "Julian W. — London"
+        "text": "Had an amazing day diving with this dive school! We did two fantastic dives and everything was super well organised. The atmosphere on the boat was great — friendly people, good vibes, and even snacks and drinks between dives! The instructors were really professional and knew all the best spots. I'll definitely be back!",
+        "author": "Martijn W.",
+        "origin": "Netherlands",
+        "flag": "https://flagcdn.com/w40/nl.png"
       },
       "1": {
-        "text": "\"The sunset boat experience with local Sardinian wines was the highlight of our summer.\"",
-        "author": "Marco P. — Milan"
+        "text": "The sunset boat experience was simply magical. Prosecco with Sardinian specialties as the sun set over the sea of Chia... a moment I'll never forget. The team was impeccable, attentive and always smiling. I will definitely come back!",
+        "author": "Anna K.",
+        "origin": "Germany",
+        "flag": "https://flagcdn.com/w40/de.png"
       },
       "2": {
-        "text": "\"They took us to a hidden cave where we were completely alone. Magic exists in Chia.\"",
-        "author": "Elena K. — Berlin"
+        "text": "The best dive center I have visited in 15 years of diving in the Mediterranean. Small groups, top Scubapro equipment, certified instructors and extraordinary dive sites. They took us to places we would never have found on our own. Absolutely to be repeated.",
+        "author": "James T.",
+        "origin": "United Kingdom",
+        "flag": "https://flagcdn.com/w40/gb.png"
       }
     }
+  },
+  "location": {
+    "tag": "Where We Are",
+    "title": "Find Us in Chia",
+    "address": "Chia, Domus de Maria, Cagliari",
+    "region": "South Sardinia, Italy",
+    "phone": "+39 338 858 5504",
+    "season": "Open: June — September",
+    "directions": "Get Directions on Google Maps",
+    "whatsapp": "Message us on WhatsApp"
   },
   "booking": {
     "title": "Ready to dive in?",

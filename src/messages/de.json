@@ -97,20 +97,40 @@
     "cta": "Mehr über Private Charter"
   },
   "testimonials": {
+    "rating": "4.9",
+    "count": "272",
+    "platform": "Google Reviews",
+    "readAll": "Alle 272 Bewertungen auf Google lesen",
     "items": {
       "0": {
-        "text": "\"Das professionellste Tauchcenter, das ich in 20 Jahren Tauchen besucht habe. Makellose Ausrüstung.\"",
-        "author": "Julian W. — London"
+        "text": "Ein fantastischer Tauchtag! Wir haben zwei spektakuläre Tauchgänge gemacht, alles perfekt organisiert. Die Atmosphäre auf dem Boot war großartig — freundliche Leute, gute Energie und sogar Snacks zwischen den Tauchgängen. Die Instruktoren waren sehr professionell. Absolut empfehlenswert!",
+        "author": "Martijn W.",
+        "origin": "Niederlande",
+        "flag": "https://flagcdn.com/w40/nl.png"
       },
       "1": {
-        "text": "\"Die Sonnenuntergangserfahrung mit lokalen sardischen Weinen war das Highlight unseres Sommers.\"",
-        "author": "Marco P. — Mailand"
+        "text": "Das Sonnenuntergang-Bootsabenteuer war einfach magisch. Prosecco mit sardischen Spezialitäten, während die Sonne über dem Meer von Chia unterging... ein Moment, den ich nie vergessen werde. Das Team war tadellos, aufmerksam und immer freundlich.",
+        "author": "Anna K.",
+        "origin": "Deutschland",
+        "flag": "https://flagcdn.com/w40/de.png"
       },
       "2": {
-        "text": "\"Sie brachten uns in eine versteckte Höhle, wo wir völlig allein waren. Magie existiert in Chia.\"",
-        "author": "Elena K. — Berlin"
+        "text": "Das beste Tauchzentrum, das ich in 15 Jahren Tauchen im Mittelmeer besucht habe. Kleine Gruppen, erstklassige Scubapro-Ausrüstung, zertifizierte Instruktoren und außergewöhnliche Tauchstellen. Sie brachten uns an Orte, die wir alleine nie gefunden hätten.",
+        "author": "James T.",
+        "origin": "Großbritannien",
+        "flag": "https://flagcdn.com/w40/gb.png"
       }
     }
+  },
+  "location": {
+    "tag": "Wo Wir Sind",
+    "title": "Finden Sie uns in Chia",
+    "address": "Chia, Domus de Maria, Cagliari",
+    "region": "Südsardinien, Italien",
+    "phone": "+39 338 858 5504",
+    "season": "Geöffnet: Juni — September",
+    "directions": "Wegbeschreibung auf Google Maps",
+    "whatsapp": "Schreiben Sie uns auf WhatsApp"
   },
   "booking": {
     "title": "Bereit einzutauchen?",

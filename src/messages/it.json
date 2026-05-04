@@ -97,20 +97,40 @@
     "cta": "Scopri i Charter Privati"
   },
   "testimonials": {
+    "rating": "4.9",
+    "count": "272",
+    "platform": "Google Reviews",
+    "readAll": "Leggi tutte le 272 recensioni su Google",
     "items": {
       "0": {
-        "text": "\"Il centro sub più professionale che abbia visitato in 20 anni di immersioni. Attrezzatura impeccabile.\"",
-        "author": "Julian W. — Londra"
+        "text": "Una giornata fantastica! Abbiamo fatto due immersioni spettacolari, tutto perfettamente organizzato. L'atmosfera in barca era ottima — gente simpatica, buona energia, e anche snack e bevande tra un'immersione e l'altra. Gli istruttori erano professionali e conoscevano ogni angolo del fondale. Lo consiglio assolutamente!",
+        "author": "Martijn W.",
+        "origin": "Paesi Bassi",
+        "flag": "https://flagcdn.com/w40/nl.png"
       },
       "1": {
-        "text": "\"L'esperienza del tramonto in barca con vini sardi locali è stata il momento clou della nostra estate.\"",
-        "author": "Marco P. — Milano"
+        "text": "Esperienza del tramonto in barca semplicemente magica. Il prosecco con le specialità sarde mentre il sole tramontava sul mare di Chia... un momento che non dimenticherò mai. Il team è stato impeccabile, attento e sempre sorridente. Tornerò sicuramente!",
+        "author": "Anna K.",
+        "origin": "Germania",
+        "flag": "https://flagcdn.com/w40/de.png"
       },
       "2": {
-        "text": "\"Ci hanno portato in una grotta nascosta dove eravamo completamente soli. La magia esiste a Chia.\"",
-        "author": "Elena K. — Berlino"
+        "text": "Il miglior centro sub che abbia visitato in 15 anni di immersioni nel Mediterraneo. Piccoli gruppi, attrezzatura Scubapro top, istruttori certificati e siti di immersione straordinari. Ci hanno portato in luoghi che non avremmo mai trovato da soli. Assolutamente da ripetere.",
+        "author": "James T.",
+        "origin": "Gran Bretagna",
+        "flag": "https://flagcdn.com/w40/gb.png"
       }
     }
+  },
+  "location": {
+    "tag": "Dove Siamo",
+    "title": "Trovaci a Chia",
+    "address": "Chia, Domus de Maria, Cagliari",
+    "region": "Sardegna del Sud, Italia",
+    "phone": "+39 338 858 5504",
+    "season": "Aperti: Giugno — Settembre",
+    "directions": "Indicazioni su Google Maps",
+    "whatsapp": "Scrivici su WhatsApp"
   },
   "booking": {
     "title": "Pronto a tuffarti?",

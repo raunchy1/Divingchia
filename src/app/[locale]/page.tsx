@@ -40,11 +40,8 @@ const USP_ICONS = [
   "diversity_3",
 ] as const;
 
-const TESTIMONIAL_FLAGS = [
-  "https://flagcdn.com/w40/gb.png",
-  "https://flagcdn.com/w40/it.png",
-  "https://flagcdn.com/w40/de.png",
-];
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Diving+Center+Chia/@38.9323932,8.9289899,17z/data=!4m6!3m5!1s0x12e6ddd752aa2703:0xc6a4af58b6eced96!8m2!3d38.9311547!4d8.9283656!16s%2Fg%2F11btvb7gjz";
+const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/Diving+Center+Chia/@38.9311547,8.9283656,17z#lrd=0x12e6ddd752aa2703:0xc6a4af58b6eced96,1";
 
 export default function HomePage() {
   const locale = useLocale();
@@ -56,6 +53,7 @@ export default function HomePage() {
   const uspT = useTranslations("usp");
   const magT = useTranslations("magazine");
   const testT = useTranslations("testimonials");
+  const locT = useTranslations("location");
   const bookT = useTranslations("booking");
   const faqT = useTranslations("faq");
 
@@ -252,46 +250,164 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          6. TESTIMONIALS
+          6. TESTIMONIALS (Google Reviews)
           ═══════════════════════════════════════════ */}
       <section className="bg-white px-8 md:px-16 py-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[1440px] mx-auto">
-          {[0, 1, 2].map((i) => (
-            <ScrollReveal key={i} delay={i * 0.15}>
-              <div className="border border-[#E8DCC8] p-10 md:p-12 flex flex-col items-center text-center">
-                <div className="flex gap-1 text-[#FFD700] mb-6">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <span
-                      key={s}
-                      className="material-symbols-outlined"
-                      style={{ fontSize: "18px", fontVariationSettings: "'FILL' 1, 'wght' 300" }}
-                    >
-                      star
-                    </span>
+        <div className="max-w-[1440px] mx-auto">
+
+          {/* Google Rating Badge */}
+          <ScrollReveal className="flex flex-col items-center mb-16 text-center">
+            <div className="flex items-center gap-4 mb-3">
+              <img src="https://www.google.com/favicon.ico" alt="Google" className="w-6 h-6" />
+              <span className="font-serif text-xs tracking-[0.15em] uppercase text-[#44474e]">{testT("platform")}</span>
+            </div>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="font-serif text-5xl md:text-6xl font-normal text-[#000d22]">{testT("rating")}</span>
+              <div className="flex flex-col">
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map((s) => (
+                    <span key={s} className="material-symbols-outlined text-[#FFD700]"
+                      style={{ fontSize: "22px", fontVariationSettings: "'FILL' 1" }}>star</span>
                   ))}
                 </div>
-                <div className="text-[#1A8FBD] mb-4">
-                  <span
-                    className="material-symbols-outlined"
-                    style={{ fontSize: "64px", fontVariationSettings: "'FILL' 1, 'wght' 300" }}
-                  >
-                    format_quote
-                  </span>
+                <span className="font-serif text-xs tracking-widest uppercase text-[#44474e] mt-1">{testT("count")} recensioni</span>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Review Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+            {[0, 1, 2].map((i) => (
+              <ScrollReveal key={i} delay={i * 0.15}>
+                <div className="border border-[#E8DCC8] p-8 md:p-10 flex flex-col h-full">
+                  {/* Stars */}
+                  <div className="flex gap-1 text-[#FFD700] mb-5">
+                    {[1,2,3,4,5].map((s) => (
+                      <span key={s} className="material-symbols-outlined"
+                        style={{ fontSize: "18px", fontVariationSettings: "'FILL' 1, 'wght' 300" }}>star</span>
+                    ))}
+                  </div>
+                  {/* Quote icon */}
+                  <div className="text-[#1A8FBD] mb-3">
+                    <span className="material-symbols-outlined"
+                      style={{ fontSize: "48px", fontVariationSettings: "'FILL' 1, 'wght' 300" }}>
+                      format_quote
+                    </span>
+                  </div>
+                  {/* Text */}
+                  <p className="font-serif text-[#000d22] text-lg leading-relaxed font-normal flex-1 mb-6">
+                    {testT(`items.${i}.text`)}
+                  </p>
+                  {/* Author */}
+                  <div className="flex items-center gap-3 mt-auto pt-4 border-t border-[#E8DCC8]">
+                    <img className="w-8 h-5 object-cover rounded-sm" src={testT(`items.${i}.flag`)} alt="" />
+                    <div>
+                      <span className="font-serif text-xs tracking-[0.1em] uppercase text-[#000d22] font-medium block">
+                        {testT(`items.${i}.author`)}
+                      </span>
+                      <span className="font-serif text-[11px] tracking-widest uppercase text-[#44474e]">
+                        {testT(`items.${i}.origin`)}
+                      </span>
+                    </div>
+                    {/* Google logo */}
+                    <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4 ml-auto opacity-50" />
+                  </div>
                 </div>
-                <p className="font-serif text-[#000d22] mb-8 text-xl md:text-2xl leading-snug font-normal">
-                  {testT(`items.${i}.text`)}
-                </p>
-                <div className="flex items-center gap-4 mt-auto">
-                  <img
-                    className="w-8 h-5 object-cover"
-                    src={TESTIMONIAL_FLAGS[i]}
-                    alt=""
-                  />
-                  <span className="font-serif text-xs tracking-[0.1em] uppercase">{testT(`items.${i}.author`)}</span>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Read all reviews CTA */}
+          <div className="flex justify-center">
+            <a
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 border border-[#c4c6cf] px-8 py-4 font-serif text-xs tracking-[0.12em] uppercase text-[#000d22] hover:border-[#000d22] transition-colors group"
+            >
+              <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4" />
+              {testT("readAll")}
+              <span className="material-symbols-outlined text-[#006689] group-hover:translate-x-1 transition-transform"
+                style={{ fontSize: "16px" }}>arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          6b. LOCATION + MAP
+          ═══════════════════════════════════════════ */}
+      <section className="bg-[#F8F6F1]">
+        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
+          {/* Map embed */}
+          <div className="relative min-h-[340px] md:min-h-[480px]">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=8.9220%2C38.9280%2C8.9360%2C38.9360&layer=mapnik&marker=38.9311547%2C8.9283656"
+              className="w-full h-full border-0 min-h-[340px]"
+              loading="lazy"
+              title="Diving Center Chia — Mappa"
+            />
+          </div>
+
+          {/* Info card */}
+          <div className="flex flex-col justify-center px-8 py-16 md:px-14 lg:px-20">
+            <span className="font-serif text-[11px] tracking-[0.2em] uppercase text-[#006689] mb-5 block">
+              {locT("tag")}
+            </span>
+            <h2 className="font-serif text-[#000d22] text-3xl md:text-4xl font-normal leading-[1.2] mb-6">
+              {locT("title")}
+            </h2>
+            <div className="w-12 h-px bg-[#E8DCC8] mb-8" />
+
+            <div className="space-y-4 mb-10">
+              {/* Address */}
+              <div className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-[#006689] flex-shrink-0"
+                  style={{ fontSize: "20px", fontVariationSettings: "'wght' 300" }}>location_on</span>
+                <div>
+                  <p className="font-serif text-[#000d22] text-sm leading-relaxed">{locT("address")}</p>
+                  <p className="font-serif text-[#44474e] text-sm">{locT("region")}</p>
                 </div>
               </div>
-            </ScrollReveal>
-          ))}
+              {/* Phone */}
+              <div className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-[#006689] flex-shrink-0"
+                  style={{ fontSize: "20px", fontVariationSettings: "'wght' 300" }}>call</span>
+                <a href="tel:+393388585504" className="font-serif text-[#000d22] text-sm hover:text-[#006689] transition-colors">
+                  {locT("phone")}
+                </a>
+              </div>
+              {/* Season */}
+              <div className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-[#006689] flex-shrink-0"
+                  style={{ fontSize: "20px", fontVariationSettings: "'wght' 300" }}>calendar_month</span>
+                <p className="font-serif text-[#44474e] text-sm">{locT("season")}</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-[#0a2342] text-white px-7 py-3.5 font-serif text-[11px] tracking-[0.12em] uppercase hover:opacity-80 transition-opacity self-start"
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: "16px" }}>map</span>
+                {locT("directions")}
+              </a>
+              <a
+                href={getWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-[#25D366] border border-[#25D366] px-7 py-3.5 font-serif text-[11px] tracking-[0.12em] uppercase hover:bg-[#25D366] hover:text-white transition-all self-start"
+              >
+                <svg className="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.887-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.556-5.332 11.89-11.888 11.89-2.015 0-3.991-.51-5.741-1.478l-6.251 1.638zm5.921-4.45s.262.155.612.366c1.39.832 3.004 1.27 4.683 1.27 4.901 0 8.89-3.988 8.89-8.89 0-2.378-.925-4.612-2.607-6.294s-3.915-2.607-6.292-2.607c-4.902 0-8.89 3.991-8.89 8.892 0 1.735.502 3.426 1.453 4.888l.348.534-1.074 3.92 4.024-1.053z"/>
+                </svg>
+                {locT("whatsapp")}
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
