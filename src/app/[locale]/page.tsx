@@ -118,7 +118,7 @@ export default function HomePage() {
           }}
         />
         <div
-          className="relative w-full flex flex-col items-start px-5 pb-12 pt-24 text-left md:items-start md:px-20 lg:px-24 md:pb-16 md:pt-16 max-w-[900px]"
+          className="relative w-full flex flex-col items-start px-5 pb-12 pt-20 text-left md:items-start md:px-20 lg:px-24 md:pb-16 md:pt-24 max-w-[900px]"
           style={{ zIndex: 3 }}
         >
           <span

@@ -34,7 +34,7 @@ export default function SunsetPage() {
         >
           <GoldLabel centered={false}>Esperienza Serale</GoldLabel>
           <h1
-            className="mb-6 font-cormorant text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
+            className="mb-6 font-cormorant text-[32px] md:text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
             style={{ color: "#FAFAF8" }}
           >
             Tramonto in Barca
@@ -80,7 +80,7 @@ export default function SunsetPage() {
       </section>
 
       {/* Content */}
-      <section className="px-8 py-32 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
+      <section className="px-8 py-16 md:py-32 md:px-6 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
         <div className="mx-auto max-w-[1200px]">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
             {/* Left — What's Included */}

@@ -31,7 +31,7 @@ export default function MapSection() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.5!2d8.9283656!3d38.9311547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e6ddd752aa2703%3A0xc6a4af58b6eced96!2sDiving+Center+Chia!5e0!3m2!1sen!2sit!4v1715270400000!5m2!1sen!2sit"
               width="100%"
-              height="450"
+              className="h-[280px] md:h-[380px] lg:h-[450px]"
               style={{ border: 0, filter: "grayscale(20%) contrast(1.05)" }}
               allowFullScreen
               loading="lazy"

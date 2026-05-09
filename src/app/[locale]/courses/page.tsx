@@ -57,13 +57,13 @@ export default function CoursesPage() {
 
       {/* Hero */}
       <section
-        className="flex min-h-[70vh] items-center px-8 pb-16 pt-32 md:px-16 lg:px-20"
+        className="flex min-h-[70vh] items-center px-8 pb-16 pt-24 md:pt-32 md:px-6 md:px-16 lg:px-20"
         style={{ backgroundColor: "#0D1B2A" }}
       >
         <div className="mx-auto w-full max-w-[1200px]">
           <GoldLabel centered={false}>Impara a Sub</GoldLabel>
           <h1
-            className="mb-6 max-w-[700px] font-cormorant text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
+            className="mb-6 max-w-[700px] font-cormorant text-[32px] md:text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
             style={{ color: "#FAFAF8" }}
           >
             Corsi Subacquei
@@ -93,7 +93,7 @@ export default function CoursesPage() {
       </section>
 
       {/* Course Rows */}
-      <section className="px-8 py-32 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
+      <section className="px-8 py-16 md:py-32 md:px-6 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
         <div className="mx-auto max-w-[1200px]">
           <ScrollReveal className="mb-16">
             <GoldLabel centered={false}>I Nostri Corsi</GoldLabel>
@@ -158,7 +158,7 @@ export default function CoursesPage() {
       </section>
 
       {/* Affiliations */}
-      <section className="px-8 py-32 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#F2F0EB" }}>
+      <section className="px-8 py-16 md:py-32 md:px-6 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#F2F0EB" }}>
         <div className="mx-auto max-w-[1200px]">
           <ScrollReveal className="mb-16 text-center">
             <GoldLabel>Affiliazioni</GoldLabel>
@@ -193,7 +193,7 @@ export default function CoursesPage() {
       </section>
 
       {/* WhatsApp CTA */}
-      <section className="px-8 py-32 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
+      <section className="px-8 py-16 md:py-32 md:px-6 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
         <div className="mx-auto max-w-[700px] text-center">
           <ScrollReveal>
             <GoldLabel>Preventivo</GoldLabel>

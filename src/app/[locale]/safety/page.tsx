@@ -56,13 +56,13 @@ export default function SafetyPage() {
 
       {/* Hero */}
       <section
-        className="flex min-h-[70vh] items-center px-8 pb-16 pt-32 md:px-16 lg:px-20"
+        className="flex min-h-[70vh] items-center px-8 pb-16 pt-24 md:pt-32 md:px-6 md:px-16 lg:px-20"
         style={{ backgroundColor: "#0D1B2A" }}
       >
         <div className="mx-auto w-full max-w-[1200px]">
           <GoldLabel centered={false}>Il Nostro Impegno</GoldLabel>
           <h1
-            className="mb-6 max-w-[700px] font-cormorant text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
+            className="mb-6 max-w-[700px] font-cormorant text-[32px] md:text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
             style={{ color: "#FAFAF8" }}
           >
             Sicurezza ed Equipaggiamento
@@ -92,7 +92,7 @@ export default function SafetyPage() {
       </section>
 
       {/* Pillars Grid */}
-      <section className="px-8 py-32 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
+      <section className="px-8 py-16 md:py-32 md:px-6 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
         <div className="mx-auto max-w-[1200px]">
           <ScrollReveal className="mb-16 text-center">
             <GoldLabel>I Nostri Pilastri</GoldLabel>
@@ -126,7 +126,7 @@ export default function SafetyPage() {
       </section>
 
       {/* Equipment + Quote */}
-      <section className="px-8 py-32 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#F2F0EB" }}>
+      <section className="px-8 py-16 md:py-32 md:px-6 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#F2F0EB" }}>
         <div className="mx-auto max-w-[1200px]">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
             {/* Equipment List */}

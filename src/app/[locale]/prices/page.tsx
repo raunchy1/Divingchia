@@ -18,7 +18,7 @@ export default function PricesPage() {
 
       {/* Hero */}
       <section
-        className="flex min-h-[60vh] md:min-h-[70vh] items-end px-5 pb-12 pt-28 md:px-16 md:pb-16 md:pt-32 lg:px-20"
+        className="flex min-h-[60vh] md:min-h-[70vh] items-end px-5 pb-12 pt-28 md:px-6 md:px-16 md:pb-16 md:pt-24 md:pt-32 lg:px-20"
         style={{ backgroundColor: "#0D1B2A" }}
       >
         <div className="mx-auto w-full max-w-[1200px]">
@@ -60,7 +60,7 @@ export default function PricesPage() {
       </section>
 
       {/* Activities Grid */}
-      <section className="px-5 py-16 md:px-16 md:py-28 lg:px-20 lg:py-32" style={{ backgroundColor: "#FAFAF8" }}>
+      <section className="px-5 py-16 md:px-6 md:px-16 md:py-28 lg:px-20 lg:py-32" style={{ backgroundColor: "#FAFAF8" }}>
         <div className="mx-auto max-w-[900px]">
           <ScrollReveal className="mb-12 md:mb-16 text-center">
             <GoldLabel>Cosa Offriamo</GoldLabel>
@@ -105,7 +105,7 @@ export default function PricesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-5 py-16 md:px-16 md:py-24 lg:px-20" style={{ backgroundColor: "#F2F0EB" }}>
+      <section className="px-5 py-16 md:px-6 md:px-16 md:py-24 lg:px-20" style={{ backgroundColor: "#F2F0EB" }}>
         <div className="mx-auto max-w-[700px] text-center">
           <ScrollReveal>
             <GoldLabel>Pronto a Tuffarti?</GoldLabel>

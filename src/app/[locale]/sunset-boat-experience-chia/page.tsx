@@ -25,7 +25,7 @@ export default function SunsetBoatExperienceChiaPage() {
         >
           <GoldLabel centered={false}>Esperienza Serale</GoldLabel>
           <h1
-            className="mb-6 font-cormorant text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
+            className="mb-6 font-cormorant text-[32px] md:text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
             style={{ color: "#FAFAF8" }}
           >
             Tramonto in Barca a Chia
@@ -69,7 +69,7 @@ export default function SunsetBoatExperienceChiaPage() {
         </div>
       </section>
 
-      <section className="px-8 py-32 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
+      <section className="px-8 py-16 md:py-32 md:px-6 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
         <div className="mx-auto max-w-[800px]">
           <ScrollReveal>
             <p className="mb-6 font-jost text-[18px] font-light leading-[1.8]" style={{ color: "#6b6b6b" }}>

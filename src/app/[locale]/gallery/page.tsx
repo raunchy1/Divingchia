@@ -33,13 +33,13 @@ export default function GalleryPage() {
 
       {/* Hero */}
       <section
-        className="flex min-h-[50vh] items-center px-8 pb-16 pt-32 md:px-16 lg:px-20"
+        className="flex min-h-[50vh] items-center px-8 pb-16 pt-24 md:pt-32 md:px-6 md:px-16 lg:px-20"
         style={{ backgroundColor: "#0D1B2A" }}
       >
         <div className="mx-auto w-full max-w-[1200px]">
           <GoldLabel centered={false}>Momenti</GoldLabel>
           <h1
-            className="mb-6 max-w-[700px] font-cormorant text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
+            className="mb-6 max-w-[700px] font-cormorant text-[32px] md:text-[48px] font-light leading-[1.1] tracking-[-0.02em] lg:text-[72px]"
             style={{ color: "#FAFAF8" }}
           >
             Galleria
