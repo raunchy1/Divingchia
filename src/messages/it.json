@@ -1,216 +1,184 @@
 {
+  "nav": {
+    "experiences": "Esperienze",
+    "offers": "Offerte",
+    "safety": "Sicurezza",
+    "gallery": "Galleria",
+    "faq": "FAQ",
+    "contact": "Contatti",
+    "book": "Prenota"
+  },
   "metadata": {
     "title": "Diving Chia | Immersioni e Snorkeling a Chia, Sardegna del Sud dal 1996",
     "description": "Esperienze premium di immersioni e snorkeling a Chia, Sardegna del Sud. Gruppi ridotti, avventure su misura dal 1996. Prenota la tua esperienza mediterranea."
   },
-  "nav": {
-    "experiences": "Esperienze",
-    "courses": "Corsi",
-    "prices": "Prezzi",
-    "safety": "Sicurezza & Attrezzatura",
-    "gallery": "Galleria",
-    "faq": "FAQ",
-    "bookNow": "Prenota Ora"
-  },
   "hero": {
-    "titleLine1": "Immersioni &",
-    "titleLine2": "Snorkeling",
-    "titleLine3": "in Sud Sardegna",
-    "subtitle": "Piccoli gruppi, servizio premium ed esperienze marine su misura dal 1996. Scopri il mondo silenzioso del Mediterraneo con le nostre guide esperte.",
-    "ctaWhatsApp": "Prenota su WhatsApp",
-    "ctaAvailability": "Verifica Disponibilità",
-    "ctaExplore": "Esplora le Esperienze"
+    "eyebrow": "DAL 1996 NEL SUD SARDEGNA",
+    "title": "Il mare del Sud Sardegna come pochi lo vivono davvero",
+    "subtitle": "Immersioni, snorkeling e uscite private tra acqua cristallina, coste selvagge e tramonti mediterranei.",
+    "description": "Piccoli gruppi, servizio curato e un'esperienza autentica lontana dal turismo di massa.",
+    "cta_whatsapp": "PRENOTA SU WHATSAPP",
+    "cta_explore": "SCOPRI LE ESPERIENZE",
+    "tags": "Diving \u2022 Snorkeling \u2022 Try Scuba \u2022 Tour Privati \u2022 Sunset Experience"
   },
-  "trustbar": {
-    "since1996": "IMMERSIONI A CHIA DAL 1996",
-    "licensed": "CENTRO PADI/SSI CERTIFICATO",
-    "smallGroups": "SOLO PICCOLI GRUPPI",
-    "instructors": "ISTRUTTORI CERTIFICATI",
-    "safety": "SICUREZZA PRIMA DI TUTTO"
+  "trustBar": {
+    "since1996": { "title": "DAL 1996", "subtitle": "Esperienza reale nel mare del Sud Sardegna" },
+    "smallGroups": { "title": "PICCOLI GRUPPI", "subtitle": "Pi\u00f9 attenzione, pi\u00f9 sicurezza, meno caos" },
+    "premium": { "title": "ESPERIENZE PREMIUM", "subtitle": "Servizio curato e personalizzato" },
+    "safety": { "title": "SICUREZZA PRIMA DI TUTTO", "subtitle": "Il mare non si improvvisa" }
+  },
+  "intro": {
+    "eyebrow": "Esperienze Autentiche",
+    "title": "Qui il mare non \u00e8 un'escursione. \u00c8 un'esperienza.",
+    "description": "Scogliere selvagge, acqua trasparente, secche, canyon rocciosi e fondali pieni di vita.\n\nOgni uscita viene organizzata in piccoli gruppi per offrirti un'esperienza autentica, elegante e completamente diversa dal turismo standard."
   },
   "services": {
-    "title": "Scegli la Tua Esperienza",
-    "subtitle": "Viaggi subacquei e marittimi curati per chi cerca l'extraordinario. Dalle certificazioni professionali alle immersioni sociali al tramonto.",
+    "eyebrow": "Le Nostre Esperienze",
+    "title": "Scegli il tuo modo di vivere il mare",
+    "description": "Che tu voglia respirare sott'acqua per la prima volta, esplorare fondali spettacolari o vivere il mare in totale relax, costruiremo l'esperienza perfetta per te.",
     "items": {
       "tryScuba": {
-        "badge": "Intro",
-        "title": "Prima Immersione",
-        "description": "Il tuo primo respiro sott'acqua. Nessuna licenza necessaria, solo curiosità.",
-        "price": "da €60/persona",
-        "discover": "Scopri"
+        "num": "01",
+        "name": "La tua prima respirazione sott'acqua",
+        "desc": "Il silenzio.\nLe bolle.\nLa luce che entra nel blu.\n\nLa prima immersione non \u00e8 soltanto qualcosa che fai. \u00c8 qualcosa che ti rimane dentro.\n\nTi accompagneremo passo dopo passo in un'esperienza sicura, emozionante e completamente diversa da qualsiasi altra attivit\u00e0 in mare.",
+        "cta": "PROVA IL TRY SCUBA"
       },
       "guidedDives": {
-        "badge": "Esperto",
-        "title": "Immersioni Guidate",
-        "description": "Per sub certificati. Pareti nascoste, canyon di granito, vita marina.",
-        "price": "da €45/persona",
-        "discover": "Scopri"
+        "num": "02",
+        "name": "Immersioni Guidate nel Sud Sardegna",
+        "desc": "Ti porteremo nei siti pi\u00f9 belli tra Chia, Cala Piombo e Capo Teulada: pareti rocciose, secche, canyon, grotte passanti e fondali pieni di vita.\n\nOgni immersione viene scelta in base alle condizioni migliori della giornata per offrirti un'esperienza autentica, sicura e spettacolare.",
+        "cta": "ORGANIZZA LA TUA IMMERSIONE"
       },
       "snorkeling": {
-        "badge": "Tutti",
-        "title": "Snorkeling in Barca",
-        "description": "Calette cristalline accessibili solo dal mare. Perfetto per tutti.",
-        "price": "da €35/persona",
-        "discover": "Scopri"
+        "num": "03",
+        "name": "Acqua trasparente, calette nascoste e il mare pi\u00f9 bello del Sud Sardegna",
+        "desc": "Esplora coste raggiungibili solo via mare, nuota in acqua cristallina e vivi il Mediterraneo nel modo pi\u00f9 rilassante e autentico possibile.\n\nPerfetto per coppie, famiglie e chi vuole vivere il mare senza immersioni con bombole.",
+        "cta": "PRENOTA SNORKELING"
       },
       "privateTours": {
-        "badge": "Privato",
-        "title": "Tour Privati & Custom",
-        "description": "Il tuo gruppo. I tuoi tempi. La tua Sardegna.",
-        "price": "Preventivo personalizzato",
-        "discover": "Scopri"
+        "num": "04",
+        "name": "Il tuo gommone. Il tuo mare. Nessuna folla.",
+        "desc": "Una barca privata, itinerario personalizzato e il Mediterraneo vissuto con calma, libert\u00e0 e atmosfera.\n\nSnorkeling, relax, aperitivo, tramonto e il mare del Sud Sardegna vissuto nel modo pi\u00f9 esclusivo possibile.",
+        "cta": "RICHIEDI TOUR PRIVATO"
       },
       "sunset": {
-        "badge": "Social",
-        "title": "Tramonto in Barca",
-        "description": "L'ora d'oro sul mare. Aperitivo incluso.",
-        "price": "da €50/persona",
-        "discover": "Scopri"
+        "num": "05",
+        "name": "Il momento pi\u00f9 bello della giornata comincia in mare",
+        "desc": "Navigazione lenta, luce dorata, aperitivo a bordo e la costa del Sud Sardegna che cambia colore davanti ai tuoi occhi.\n\nNon una semplice uscita. Un'esperienza da ricordare.",
+        "cta": "VIVI IL TRAMONTO"
       },
       "courses": {
-        "badge": "Certifica",
-        "title": "Corsi Sub",
-        "description": "Certificazioni PADI & SSI con istruttori locali esperti.",
-        "price": "Su richiesta",
-        "discover": "Scopri"
+        "num": "06",
+        "name": "Corsi Subacquei",
+        "desc": "Dalla prima esperienza fino ai livelli avanzati.\n\nFormazione seria, piccoli gruppi e oltre 25 anni di esperienza per imparare ad andare sott'acqua in modo sicuro, consapevole e rilassato.",
+        "cta": "SCOPRI I CORSI"
       }
     }
   },
-  "usp": {
-    "title": "I Pilastri dell'Eccellenza",
+  "whyUs": {
+    "eyebrow": "La Nostra Differenza",
+    "title": "Non siamo un diving per grandi numeri",
+    "description": "Preferiamo meno persone a bordo e pi\u00f9 qualit\u00e0 nell'esperienza.\n\nPer questo lavoriamo con piccoli gruppi, programmi personalizzati e attenzione reale verso ogni cliente.",
     "items": {
-      "0": { "label": "Dal 1996", "description": "Eredità Marittima" },
-      "1": { "label": "Protocollo Sicurezza", "description": "Attrezzatura controllata giornalmente" },
-      "2": { "label": "Piccoli Gruppi", "description": "Massima attenzione personale" },
-      "3": { "label": "Equipaggiamento Elite", "description": "Attrezzatura Scubapro e Mares" },
-      "4": { "label": "Esperienze Custom", "description": "Progettate per il tuo gruppo" },
-      "5": { "label": "Tour Snorkeling", "description": "Accesso a calette segrete" },
-      "6": { "label": "Conoscenza Locale", "description": "Conosciamo ogni barriera" },
-      "7": { "label": "Tutti i Livelli", "description": "Dalla prima immersione all'avanzato" }
-    }
+      "since1996": { "num": "01", "label": "DAL 1996", "desc": "Viviamo e lavoriamo in questo mare da decenni." },
+      "smallGroups": { "num": "02", "label": "MAX 6 SUB PER GUIDA", "desc": "Pi\u00f9 sicurezza, pi\u00f9 attenzione, meno caos." },
+      "equipment": { "num": "03", "label": "ATTREZZATURA CONTROLLATA", "desc": "Materiale verificato e preparato quotidianamente." },
+      "custom": { "num": "04", "label": "ESPERIENZE PERSONALIZZATE", "desc": "Ogni uscita viene adattata alle condizioni del mare." },
+      "safetyFirst": { "num": "05", "label": "SICUREZZA REALE", "desc": "Meteo, vento e mare vengono valutati ogni giorno." },
+      "local": { "num": "06", "label": "CONOSCENZA LOCALE", "desc": "Ti portiamo dove conta davvero andare." }
+    },
+    "quote": "Non \u00e8 turismo di massa. \u00c8 la tua esperienza, pensata per te.",
+    "quoteEn": "This is not mass tourism. This is your experience, designed around you."
   },
-  "magazine": {
-    "label": "Viaggi su Misura",
-    "title": "Esperienze Private, Solo per Te",
-    "quote": "\"Crediamo che l'oceano sia vissuto al meglio in silenzio e solitudine.\"",
-    "description": "Progetta il tuo itinerario. Dalle sessioni private di snorkeling in grotte nascoste agli aperitivi celebrativi sotto le stelle del Mediterraneo.",
-    "cta": "Scopri i Charter Privati"
+  "map": {
+    "eyebrow": "Dove Operiamo",
+    "title": "Dove operiamo",
+    "description": "Le nostre attivit\u00e0 si svolgono tra:\n\n\u2022 Chia\n\u2022 Pula\n\u2022 Cala Piombo\n\u2022 Capo Teulada\n\nUno dei tratti di costa pi\u00f9 spettacolari e autentici della Sardegna."
+  },
+  "timeline": {
+    "eyebrow": "Come Funziona",
+    "title": "Come si vive una giornata con noi",
+    "steps": [
+      { "title": "Benvenuto e briefing", "desc": "Ti accogliamo, prepariamo l'attrezzatura e organizziamo tutto con calma.\n\nNessuna fretta. Nessun caos.", "icon": "\u2600\ufe0f" },
+      { "title": "Navigazione", "desc": "Partiamo lungo la costa verso il punto migliore della giornata.", "icon": "\u26f5" },
+      { "title": "Esperienza in mare", "desc": "Immersioni, snorkeling, relax e il mare autentico del Sud Sardegna.", "icon": "\ud83e\udd3f" },
+      { "title": "Relax e rientro", "desc": "Rientriamo con la sensazione di aver vissuto qualcosa di vero.", "icon": "\ud83d\udcf8" }
+    ]
+  },
+  "safety": {
+    "eyebrow": "Sicurezza",
+    "title": "La sicurezza viene prima di tutto",
+    "description": "Ogni uscita viene organizzata valutando:\n\n\u2022 meteo;\n\u2022 vento;\n\u2022 mare;\n\u2022 esperienza dei partecipanti;\n\u2022 comfort;\n\u2022 logistica.\n\nSe le condizioni non sono adeguate, cambiamo itinerario o programma.\n\nPreferiamo rinunciare a un'uscita piuttosto che improvvisare."
   },
   "testimonials": {
-    "rating": "4.9",
-    "count": "272",
-    "platform": "Google Reviews",
-    "readAll": "Leggi tutte le 272 recensioni su Google",
-    "items": {
-      "0": {
-        "text": "Una giornata fantastica! Abbiamo fatto due immersioni spettacolari, tutto perfettamente organizzato. L'atmosfera in barca era ottima — gente simpatica, buona energia, e anche snack e bevande tra un'immersione e l'altra. Gli istruttori erano professionali e conoscevano ogni angolo del fondale. Lo consiglio assolutamente!",
-        "author": "Martijn W.",
-        "origin": "Paesi Bassi",
-        "flag": "https://flagcdn.com/w40/nl.png"
-      },
-      "1": {
-        "text": "Esperienza del tramonto in barca semplicemente magica. Il prosecco con le specialità sarde mentre il sole tramontava sul mare di Chia... un momento che non dimenticherò mai. Il team è stato impeccabile, attento e sempre sorridente. Tornerò sicuramente!",
-        "author": "Anna K.",
-        "origin": "Germania",
-        "flag": "https://flagcdn.com/w40/de.png"
-      },
-      "2": {
-        "text": "Il miglior centro sub che abbia visitato in 15 anni di immersioni nel Mediterraneo. Piccoli gruppi, attrezzatura Scubapro top, istruttori certificati e siti di immersione straordinari. Ci hanno portato in luoghi che non avremmo mai trovato da soli. Assolutamente da ripetere.",
-        "author": "James T.",
-        "origin": "Gran Bretagna",
-        "flag": "https://flagcdn.com/w40/gb.png"
-      }
-    }
+    "eyebrow": "Recensioni",
+    "title": "Esperienze reali",
+    "description": "Persone provenienti da tutto il mondo scelgono Diving Center Chia per vivere il mare del Sud Sardegna nel modo pi\u00f9 autentico, sicuro e spettacolare possibile.",
+    "cta": "Leggi tutte le recensioni su Google",
+    "items": [
+      { "quote": "Abbiamo provato il Try Scuba in famiglia e \u00e8 stata un'esperienza indimenticabile. I ragazzi del centro ci hanno accolto con professionalit\u00e0 e calore umano, spiegando ogni passaggio con pazienza. Mio figlio di 14 anni, che all'inizio era terrorizzato, \u00e8 uscito dall'acqua con il sorriso pi\u00f9 grande che gli abbia mai visto. Il mare di Chia \u00e8 uno spettacolo, ma \u00e8 il team che rende tutto magico. Consigliatissimo per chi cerca qualit\u00e0 e attenzione vera.", "name": "Marco & Giulia", "from": "Milano, Italia", "stars": 5 },
+      { "quote": "We had the most incredible diving experience with Diving Center Chia. As first-time divers, we were naturally anxious, but the instructors were patient, knowledgeable, and made us feel completely safe. The underwater landscapes around Chia and Capo Teulada are breathtaking \u2014 crystal clear water, vibrant marine life, and dramatic rock formations. What sets this place apart is the personal touch: small groups, no rushing, and genuine passion for the sea. This was the highlight of our Sardinia holiday and we will definitely return next summer!", "name": "Sarah T.", "from": "London, UK", "stars": 5 },
+      { "quote": "Ho fatto diverse immersioni in tutta Italia, ma quelle a Chia con questo centro sono state le migliori di sempre. Conoscono ogni anfratto della costa, sanno esattamente dove andare in base alle condizioni del mare e ti fanno sentire sempre al sicuro. Abbiamo visto cernie giganti, murene, polpi e un fondale che sembrava un acquario naturale. La barca \u00e8 comoda, l'attrezzatura top e l'atmosfera a bordo \u00e8 quella di un gruppo di amici, non di un tour commerciale. Se cercate il mare autentico del Sud Sardegna, questo \u00e8 il posto giusto.", "name": "Francesco", "from": "Roma, Italia", "stars": 5 },
+      { "quote": "Das Schnorcheln und der Sunset-Bootsausflug waren die absoluten Highlights unseres Urlaubs. Das Team hat uns zu versteckten Buchten gebracht, die wir niemals alleine gefunden h\u00e4tten. Das Wasser war so klar, dass wir Fische und Korallen in jeder Tiefe sehen konnten. Beim Sonnenuntergang gab es einen leckeren Aperitif an Bord \u2014 romantisch, entspannt und perfekt organisiert. Man merkt sofort, dass hier Profis am Werk sind, die das Meer lieben und es ihren G\u00e4sten auf authentische Weise zeigen wollen. Absolut empfehlenswert!", "name": "Thomas & Anna", "from": "M\u00fcnchen, Deutschland", "stars": 5 }
+    ]
   },
-  "location": {
-    "tag": "Dove Siamo",
-    "title": "Trovaci a Chia",
-    "address": "Chia, Domus de Maria, Cagliari",
-    "region": "Sardegna del Sud, Italia",
-    "phone": "+39 338 858 5504",
-    "season": "Aperti: Giugno — Settembre",
-    "directions": "Indicazioni su Google Maps",
-    "whatsapp": "Scrivici su WhatsApp"
+  "quotes": {
+    "eyebrow": "Preventivi",
+    "title": "Ogni esperienza viene costruita su misura",
+    "description": "Il mare cambia ogni giorno.\n\nPer questo organizziamo programmi personalizzati in base a:\n\n\u2022 livello;\n\u2022 numero di persone;\n\u2022 meteo;\n\u2022 attivit\u00e0 scelta;\n\u2022 richieste particolari;\n\u2022 esperienza desiderata.",
+    "note": "Nessun listino fisso. Nessun prezzo standard. Ogni uscita viene quotata individualmente per garantirti il miglior rapporto qualit\u00e0-prezzo e un'esperienza costruita davvero su misura.",
+    "cta": "RICHIEDI IL TUO PREVENTIVO DEDICATO",
+    "cta_sub": "Risposta rapida via WhatsApp"
   },
   "booking": {
-    "title": "Pronto a tuffarti?",
-    "ctaWhatsApp": "PRENOTA SU WHATSAPP",
-    "orCall": "O CHIAMACI: +39 338 858 5504"
-  },
-  "faq": {
-    "title": "Domande Frequenti",
-    "items": {
-      "0": {
-        "q": "Serve la certificazione subacquea?",
-        "a": "Per le immersioni guidate sì, è richiesta una certificazione valida (PADI, SSI o equivalente). Per le esperienze Try Scuba e snorkeling non è necessaria alcuna esperienza precedente."
-      },
-      "1": {
-        "q": "I principianti possono partecipare?",
-        "a": "Assolutamente sì! Le nostre esperienze Try Scuba sono progettate appositamente per chi non ha mai immersioni. I nostri istruttori certificati vi accompagneranno passo dopo passo."
-      },
-      "2": {
-        "q": "Cosa succede se le condizioni marine sono avverse?",
-        "a": "La sicurezza è la nostra priorità assoluta. Se le condizioni marine non sono idonee, proponiamo un'alternativa o rimborsiamo l'intero importo."
-      },
-      "3": {
-        "q": "Cosa devo portare?",
-        "a": "Portate solo il costume da bagno, l'asciugamano e la protezione solare. Tutta l'attrezzatura subacquea è inclusa nelle nostre esperienze."
-      },
-      "4": {
-        "q": "L'attrezzatura è inclusa nel prezzo?",
-        "a": "Sì, tutta l'attrezzatura subacquea di alta qualità (Scubapro, Mares) è inclusa nel prezzo dell'esperienza."
-      },
-      "5": {
-        "q": "Quanto dura ogni esperienza?",
-        "a": "Le immersioni guidate durano circa 3-4 ore. Lo snorkeling dura circa 2-3 ore. L'esperienza tramonto dura circa 2 ore. I corsi hanno durata variabile."
-      },
-      "6": {
-        "q": "Dove ci incontriamo e da dove partiamo?",
-        "a": "Il punto d'incontro è presso il nostro centro a Chia, Domus de Maria. Forniamo indicazioni dettagliate al momento della prenotazione."
-      }
-    }
-  },
-  "gallery": {
-    "title": "Galleria",
-    "subtitle": "Momenti autentici dal mare della Sardegna del Sud",
-    "items": {
-      "chiSiamo": {
-        "tag": "Chi Siamo",
-        "title": "Nati dall'Amore per il Mare",
-        "body": "Nati dall'amore per il mare di un gruppo di istruttori esperti, il Diving Center Chia è oggi un punto di riferimento per gli appassionati di immersioni tra Chia e Capo Teulada. La nostra missione è trasformare le tue vacanze in Sardegna in un'esperienza memorabile, facendoti sentire parte di una grande famiglia subacquea fin dal primo momento. Il nostro team è composto da professionisti qualificati con anni di esperienza internazionale e una passione smisurata per l'oceano. Guidiamo ogni immersione con entusiasmo, attenzione e dedizione, mettendo la sicurezza e il comfort al primo posto. Dall'attrezzatura di altissima qualità ai briefing accurati prima di ogni tuffo, ogni dettaglio è pensato per offrirti il massimo. Crediamo nel potere emotivo del mare e nella magia di condividere queste sensazioni con i nostri ospiti."
-      },
-      "immersioni": {
-        "tag": "Immersioni",
-        "title": "Un Paradiso Sottomarino da Esplorare",
-        "body": "La costa di Chia è un paradiso sottomarino tutto da scoprire. Ogni immersione con noi è un viaggio unico attraverso paesaggi mozzafiato: pareti di roccia ricoperte di gorgonie, grotte misteriose e giardini di posidonia popolati da pesci variopinti. Le acque tra Chia e Capo Spartivento offrono una varietà straordinaria di siti — dalle secche brulicanti di vita ai relitti storici sul fondale, fino a vere montagne sommerse che emergono dalle distese bianche di sabbia. Le nostre guide esperte ti accompagneranno nei punti più spettacolari, scegliendo ogni giorno il percorso migliore in base alle condizioni del mare e al tuo livello. A bordo dei nostri gommoni, vivrai l'avventura in piccoli gruppi con tutta l'attenzione che meriti. Barracuda argentati, maestose cernie, curiosi polpi e, con un po' di fortuna, anche i delfini di passaggio potranno accompagnare le tue avventure."
-      },
-      "snorkeling": {
-        "tag": "Snorkeling & Aperitivo",
-        "title": "Il Tramonto sul Mare di Chia",
-        "body": "Immagina di salpare nel tardo pomeriggio, mentre il sole tramonta all'orizzonte dipingendo il cielo di oro e rosa. Le acque calme e cristalline di Chia ti accolgono per un bagno con maschera e boccaglio: tra rocce scolpite dal mare e pesci dai colori vivaci, lo snorkeling al tramonto ha un fascino indescrivibile. A bordo ti aspetta un aperitivo galleggiante indimenticabile: un brindisi con prosecco ghiacciato e degustazioni gourmet di specialità sarde, da gustare cullati dalle onde mentre il cielo si illumina di magia. Non è una semplice gita in barca, ma un vero viaggio sensoriale al tramonto. Il momento clou? L'ora d'oro in mezzo al mare, quando il sole tocca l'acqua e tutto intorno si illumina di riflessi dorati. Con un calice in mano e il cuore pieno di meraviglia, capirai di aver catturato l'essenza della Sardegna."
-      },
-      "corsi": {
-        "tag": "Corsi Sub",
-        "title": "La Porta verso Infinite Avventure",
-        "body": "Vuoi scoprire il mondo sottomarino da protagonista? I nostri corsi di immersione sono la porta verso infinite avventure, pensati sia per chi muove i primi passi sott'acqua sia per i sub esperti che vogliono migliorare. Siamo un centro multi-agenzia: offriamo certificazioni PADI, SSI e CMAS, una garanzia di qualità riconosciuta in tutto il mondo. Accogliamo i principianti assoluti con il Discover Scuba Diving, un'esperienza introduttiva in acque basse per sentire il brivido di respirare sott'acqua in totale sicurezza. Puoi poi proseguire con l'Open Water Diver, che ti qualifica fino a 18 metri in autonomia, e crescere con l'Advanced Open Water, i corsi di Specialità (deep diving, notturne, relitti, fotografia subacquea) e il Rescue Diver. Pensiamo anche ai più piccoli: con il Bubblemaker (dagli 8 anni) i bambini possono divertirsi nel mondo subacqueo in modo giocoso e protetto. I nostri istruttori pazienti e appassionati ti seguiranno passo dopo passo."
-      },
-      "eventi": {
-        "tag": "Eventi Speciali",
-        "title": "Momenti Esclusivi Creati per Te",
-        "body": "Stai cercando un'esperienza davvero esclusiva e su misura? Siamo qui per trasformare i tuoi sogni in realtà in un contesto unico: il mare di Chia al tramonto, una barca tutta per te, e momenti creati ad hoc solo per voi. Organizziamo eventi privati ed esperienze romantiche indimenticabili, con attenzione ai minimi dettagli. Dicci la tua idea e la trasformeremo in realtà: una proposta di matrimonio sott'acqua con l'anello consegnato sul fondo del mare? Una crociera al tramonto per te e la tua metà con champagne e musica soft per celebrare un anniversario speciale? Con il nostro gommone e il nostro team dedicato, puoi vivere il mare in totale privacy. Offriamo anche la possibilità di noleggiare la barca per eventi esclusivi: un tour personalizzato da regalare come sorpresa di nozze, un'esperienza su misura da aggiungere alla luna di miele, o una gita privata per stupire il partner con una dichiarazione d'amore in mare aperto."
-      },
-      "rental": {
-        "tag": "Noleggio Attrezzatura",
-        "title": "Viaggia Leggero, Pensiamo a Tutto Noi",
-        "body": "Viaggia leggero: pensiamo noi a tutta l'attrezzatura! Al Diving Center Chia disponiamo di un ampio parco attrezzature pronto per il noleggio, con completo equipaggiamento subacqueo dei migliori marchi (mute, BCD, regolatori, bombole, computer subacquei e tutto il necessario). Ogni componente è regolarmente ispezionato, sanificato e mantenuto in condizioni impeccabili, per assicurare immersioni confortevoli e sicure. Se hai bisogno di qualcosa, dal semplice boccaglio alla muta da 5mm, lo trovi da noi. Siamo dotati di una stazione di rifornimento all'avanguardia, con la possibilità di erogare miscele Nitrox al 32% e 36% per chi vuole immersioni più lunghe in totale sicurezza. Nel nostro dive shop trovi anche articoli in vendita e souvenir: puoi acquistare maschere e pinne da snorkeling, t-shirt e gadget firmati Diving Center Chia. Che tu sia un sub esperto con la tua attrezzatura o un principiante senza nulla in valigia, siamo pronti ad assisterti."
-      }
-    }
+    "eyebrow": "Contatti",
+    "title": "Raccontaci cosa vuoi vivere",
+    "description": "Dicci quale \u00e8 la tua esperienza ideale e ti risponderemo in pochi minuti via WhatsApp.",
+    "name": "Nome",
+    "name_placeholder": "Il tuo nome completo",
+    "phone": "WhatsApp",
+    "phone_placeholder": "+39 ...",
+    "date": "Data",
+    "people": "Numero persone",
+    "people_placeholder": "Seleziona...",
+    "activity": "Esperienza desiderata",
+    "activity_placeholder": "Seleziona un'attivit\u00e0...",
+    "level": "Livello subacqueo",
+    "level_placeholder": "Seleziona il tuo livello...",
+    "hotel": "Messaggio",
+    "hotel_placeholder": "Scrivi qui il tuo messaggio...",
+    "submit": "Invia richiesta via WhatsApp",
+    "required": "*",
+    "people_options": ["1", "2", "3", "4", "5+", "Gruppo (6+)"],
+    "activity_options": ["Try Scuba", "Immersioni Guidate", "Snorkeling", "Tour Privato", "Tramonto in Barca", "Corso Sub"],
+    "level_options": ["Mai immersioni", "Principiante", "Avanzato", "Esperto"]
   },
   "footer": {
-    "tagline": "IL MONDO SILENZIOSO DELLA SARDEGNA. CURATO DAL 1996.",
-    "experiences": "Esperienze",
-    "company": "Azienda",
-    "location": "Location",
-    "copyright": "© 2025 DIVING CHIA. ECCELLENZA MARITTIMA."
+    "tagline": "Esperienze autentiche nel mare del Sud Sardegna",
+    "location": "Chia, Sardegna del Sud, Italia",
+    "copyright": "\u00a9 2025 Diving Chia \u2014 Bad Boy of Sardinia",
+    "follow": "Seguici",
+    "nav_title": "Navigazione",
+    "exp_title": "Esperienze",
+    "book_title": "Prenota la tua esperienza",
+    "experiences": {
+      "tryScuba": "Try Scuba",
+      "guidedDives": "Immersioni Guidate",
+      "snorkeling": "Snorkeling",
+      "privateTours": "Tours Privati",
+      "sunset": "Tramonto in Barca",
+      "courses": "Corsi Sub"
+    },
+    "nav": {
+      "home": "Home",
+      "experiences": "Esperienze",
+      "offers": "Offerte",
+      "safety": "Sicurezza",
+      "gallery": "Galleria",
+      "faq": "FAQ",
+      "contact": "Contatti"
+    },
+    "phone": "+39 338 858 5504",
+    "whatsappAria": "Contatta su WhatsApp"
   }
 }

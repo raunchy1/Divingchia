@@ -1,37 +1,42 @@
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, setRequestLocale } from 'next-intl/server'
-import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
-import '../globals.css'
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { hasLocale } from 'next-intl';
+import { routing } from '@/i18n/routing';
+import '../globals.css';
 
-const locales = ['it', 'en', 'de'] as const
+export const dynamic = 'force-static';
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  setRequestLocale(params.locale)
-  const messages = await getMessages()
-  const meta = (messages as any).metadata || {}
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
   return {
-    title: meta.title || 'Diving Chia',
-    description: meta.description || '',
-    openGraph: {
-      title: meta.title || 'Diving Chia',
-      description: meta.description || '',
-      type: 'website',
-    },
-  }
+    title: t('title'),
+    description: t('description'),
+  };
 }
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params,
 }: {
-  children: React.ReactNode
-  params: { locale: string }
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
-  if (!locales.includes(locale as any)) notFound()
+  const { locale } = await params;
 
-  setRequestLocale(locale)
-  const messages = await getMessages()
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>
@@ -41,15 +46,15 @@ export default async function LocaleLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
         />
       </head>
-      <body className="font-sans font-light antialiased bg-[#faf9fc] text-[#1b1b1e]">
-        <NextIntlClientProvider messages={messages} locale={locale}>
+      <body className="font-jost font-light antialiased">
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
     </html>
-  )
+  );
 }
 
 export function generateStaticParams() {
-  return locales.map(locale => ({ locale }))
+  return routing.locales.map((locale) => ({ locale }));
 }

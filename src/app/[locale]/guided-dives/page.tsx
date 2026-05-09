@@ -165,31 +165,17 @@ export default function GuidedDivesPage() {
               </ul>
             </ScrollReveal>
 
-            {/* Price */}
+            {/* WhatsApp CTA */}
             <ScrollReveal delay={0.2}>
               <div className="p-8 md:p-12" style={{ backgroundColor: "#FAFAF8" }}>
                 <h3
                   className="mb-6 font-cormorant text-[24px] font-light leading-[1.3]"
                   style={{ color: "#1a1a1a" }}
                 >
-                  Prezzi
+                  Richiedi la tua offerta personalizzata
                 </h3>
-                <div className="mb-8">
-                  <span
-                    className="font-cormorant text-[56px] font-light leading-none"
-                    style={{ color: "#1a1a1a" }}
-                  >
-                    &euro;65
-                  </span>
-                  <span className="ml-2 font-jost text-[15px] font-light" style={{ color: "#9a9a9a" }}>
-                    per immersione
-                  </span>
-                </div>
                 <p className="mb-8 font-jost text-[15px] font-light leading-[1.7]" style={{ color: "#6b6b6b" }}>
-                  Prezzo per persona per singola immersione guidata con equipaggiamento incluso. Sconti per pacchetti multipli.
-                </p>
-                <p className="mb-8 font-jost text-[13px] font-light" style={{ color: "#9a9a9a" }}>
-                  Price per person per single guided dive with equipment included. Discounts for multi-dive packages.
+                  Ogni uscita viene quotata individualmente in base al numero di persone, all&apos;attività scelta e alle condizioni del mare. Contattaci su WhatsApp per ricevere il tuo preventivo dedicato.
                 </p>
                 <a
                   href={getWhatsAppLink()}
@@ -198,7 +184,7 @@ export default function GuidedDivesPage() {
                   className="inline-block w-full px-10 py-4 text-center font-jost text-xs font-normal uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-90"
                   style={{ backgroundColor: "#25D366" }}
                 >
-                  Prenota su WhatsApp
+                  CHIEDI OFFERTA SU WHATSAPP
                 </a>
               </div>
             </ScrollReveal>

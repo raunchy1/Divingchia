@@ -4,9 +4,9 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ['lh3.googleusercontent.com', 'flagcdn.com'],
-  },
-}
+  output: 'export',
+  images: { unoptimized: true },
+  trailingSlash: true,
+};
 
-module.exports = withNextIntl(nextConfig)
+module.exports = withNextIntl(nextConfig);

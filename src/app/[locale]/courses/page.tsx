@@ -15,35 +15,30 @@ const courses = [
   {
     num: "01",
     name: "Discover Scuba Diving",
-    price: "€85",
     duration: "1/2 giorno",
     desc: "La tua prima esperienza sott'acqua. Nessuna certificazione richiesta, un breve briefing e un istruttore sempre al tuo fianco.",
   },
   {
     num: "02",
     name: "Open Water Diver",
-    price: "€420",
     duration: "3-4 giorni",
     desc: "Il corso base per diventare subacqueo certificato. Teoria, esercizi in acque confinate e 4 immersioni in mare aperto.",
   },
   {
     num: "03",
     name: "Advanced Open Water",
-    price: "€320",
     duration: "2-3 giorni",
     desc: "Migliora le tue competenze con 5 immersioni di specialit&agrave;: deep, navigazione, e tre a tua scelta tra le nostre proposte.",
   },
   {
     num: "04",
     name: "Rescue Diver",
-    price: "€380",
     duration: "3-4 giorni",
     desc: "Impara a gestire situazioni di emergenza e a prenderti cura degli altri sub. Un corso stimolante che ti farà crescere come subacqueo.",
   },
   {
     num: "05",
     name: "Divemaster",
-    price: "Su richiesta",
     duration: "4+ settimane",
     desc: "Il primo livello professionale. Diventa un leader, assisti gli istruttori e porta gli altri alla scoperta del mondo subacqueo.",
   },
@@ -140,17 +135,17 @@ export default function CoursesPage() {
                     />
                   </div>
 
-                  {/* Right — price + duration */}
+                  {/* Right — duration */}
                   <div className="shrink-0 md:ml-4 md:text-right">
                     <span
-                      className="block font-cormorant text-[28px] font-light leading-none"
-                      style={{ color: "#1a1a1a" }}
+                      className="block font-jost text-[13px] font-light uppercase tracking-[0.1em]"
+                      style={{ color: "#9a9a9a" }}
                     >
-                      {course.price}
+                      Durata
                     </span>
                     <span
-                      className="mt-1 block font-jost text-[13px] font-light"
-                      style={{ color: "#9a9a9a" }}
+                      className="mt-1 block font-jost text-[15px] font-light"
+                      style={{ color: "#1a1a1a" }}
                     >
                       {course.duration}
                     </span>
@@ -194,6 +189,33 @@ export default function CoursesPage() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* WhatsApp CTA */}
+      <section className="px-8 py-32 md:px-16 md:py-36 lg:px-20 lg:py-40" style={{ backgroundColor: "#FAFAF8" }}>
+        <div className="mx-auto max-w-[700px] text-center">
+          <ScrollReveal>
+            <GoldLabel>Preventivo</GoldLabel>
+            <h2
+              className="mb-4 font-cormorant text-[28px] font-light leading-[1.15] md:text-[40px]"
+              style={{ color: "#1a1a1a" }}
+            >
+              Richiedi la tua offerta personalizzata
+            </h2>
+            <p className="mb-8 font-jost text-[15px] font-light leading-[1.7]" style={{ color: "#6b6b6b" }}>
+              Ogni corso viene quotato individualmente in base al livello, al numero di partecipanti e alle tue esigenze specifiche. Contattaci su WhatsApp per ricevere il tuo preventivo dedicato.
+            </p>
+            <a
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-10 py-4 font-jost text-xs font-normal uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-90"
+              style={{ backgroundColor: "#25D366" }}
+            >
+              CHIEDI OFFERTA SU WHATSAPP
+            </a>
+          </ScrollReveal>
         </div>
       </section>
 

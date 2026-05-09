@@ -7,468 +7,793 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
-import { getWhatsAppLink } from "@/lib/whatsapp";
-
-const IMG = {
-  hero: "https://lh3.googleusercontent.com/aida-public/AB6AXuDd81N-Pb6QPR2walyTUFTUTUoxyTYoNkeIzMswwfCll1oKg_s_gaOH5G4AExoHImsg7d2VpxQeWfPT4ezO-eRy4096HJSTmWp2axN9HleGxerX6WVGhat6qwLdSeZY42dJTeoF-06nf3JuzqmWOLtDdoJcgSCRmJHDzRFgeQYSx8uaCED_7yfXOKzgII_4auqS5G3iuk6YhW7WAt28W8G8UrBoTNzU_LI-aRzN6GRb9PpHQ-7SJ3TRIT6uwBD7q5A5xuk_Y34BY1S9",
-  tryScuba: "https://lh3.googleusercontent.com/aida-public/AB6AXuBemVyI20gtmhh0LeP2hb6XYyhgL3_Q1Ns68WPN9Ri-TI_MMrF1aQ8OJ5GVaQQOt_z8278BknWNiNSP5uc48YZNePUauL6YGfKIQJDirQ8AEjgJkDjd7j0qdhCNK4OEh_OpZU4USeEesLODjeker98aFwbJtpT3yiceVJHNQn0tmXIwmFYH-Ad6OFK7kmIYnCBT-iqFbHfBjrB88g_k4BC4uqjisrRkEcLqPcwhDyB7Rkfm4PE_QFEOivgc1cpjKFWqEJVR4B7FG4pp",
-  guidedDives: "https://lh3.googleusercontent.com/aida-public/AB6AXuDNui_uapHuo2_WahlVBY7q4uiz6X7RDSvS77HAabZW77fg79KQSm7xYQDzV_CM2JtbMUCggD5tDestPirc5C2AH--4EykL22Zpoaui8Qfn9MEO38sO5YFfM-hyJKP9qr5aQxGReVSOMfqEy-oFyM8q09OIZK_anzjxJWQaBDbrjBr4Kq6WiVHy_nRsQwZM6OkEGmGHyrO6nVsUtbKyoMbYz6x_W61VHcud-HNFk6LdE-RY6FFLxIjGL20b1JEZgsaLCPYnRrSaUZt9",
-  snorkeling: "https://lh3.googleusercontent.com/aida-public/AB6AXuDePR4taRK7cr_Xj6YVOCIgFYg3swwm5m80lL6ECei3ODtCuGaSwNKrlEzFWGaEpmJNHA33V28pswyYfwQBJxUgbBIZSYCofBLbWlOL9yy3w3p3Eqbg4IPIKV4BMuWPPmhZSKKWdcuJ7JuRBsDP0-ImEH6IG6n8qw9MD5UBeL7D3RdX783lXwl3Bq2Q5YMgAx6-gKhRpKjd1pWaH6I8dzWfgFptCWdM4LhXzQ0HcW-2wZvEyKHFoUQeFU6rPWkos0RxbrtX1zOimPLI",
-  privateTours: "https://lh3.googleusercontent.com/aida-public/AB6AXuAo2lGluLVfqCmaehaLXsglgepLvTxIsjjcK3_svmU-odVXiAFIyQ8aCERso0nQHOUYgeIbmu6xE4S0jSr53MChJw6lgEd5A5pb1yqilFXpmTP4uuy-b8YUfObYL3grN2v1dP3yZWvPN4LoVrnLH9D_ObtlA1mzhUNK-5iEEgondKl0MoztRK-_PoCLh5YcLPTN8qT2oAh-ORSpHpSz6Rp9jLUCQaq9I1HKXg6S5sEVedOwZTTa9zjFM-Mj4WfHPMCio1fa3QYq24gX",
-  sunset: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxqoWYHlXy-xXXlrG-zQWeYJInguFVcMaGZVw0LLGKJV4hEabVGaDNchX4_yOUO3M1Wr86hGij-mCcsjiJhvygFy5HxA8AVDj6VJu-T7hkI1b51UmRe_Ha3v8dn2TvP7fByYws6z6X1TWTRuXBmL4GW0wT9aNVtkaP3K7JdvYGdlwjyXOfIWR5vXzppCTJih4C1sfrEx6J4Br87TSv0ycN6e8f34-wMiss_AraJUSK9wuqTQM7x1e0MD_eQPhZjm8yQ31eBQeUelQ9",
-  courses: "https://lh3.googleusercontent.com/aida-public/AB6AXuDNui_uapHuo2_WahlVBY7q4uiz6X7RDSvS77HAabZW77fg79KQSm7xYQDzV_CM2JtbMUCggD5tDestPirc5C2AH--4EykL22Zpoaui8Qfn9MEO38sO5YFfM-hyJKP9qr5aQxGReVSOMfqEy-oFyM8q09OIZK_anzjxJWQaBDbrjBr4Kq6WiVHy_nRsQwZM6OkEGmGHyrO6nVsUtbKyoMbYz6x_W61VHcud-HNFk6LdE-RY6FFLxIjGL20b1JEZgsaLCPYnRrSaUZt9",
-  magazine: "https://lh3.googleusercontent.com/aida-public/AB6AXuAo2lGluLVfqCmaehaLXsglgepLvTxIsjjcK3_svmU-odVXiAFIyQ8aCERso0nQHOUYgeIbmu6xE4S0jSr53MChJw6lgEd5A5pb1yqilFXpmTP4uuy-b8YUfObYL3grN2v1dP3yZWvPN4LoVrnLH9D_ObtlA1mzhUNK-5iEEgondKl0MoztRK-_PoCLh5YcLPTN8qT2oAh-ORSpHpSz6Rp9jLUCQaq9I1HKXg6S5sEVedOwZTTa9zjFM-Mj4WfHPMCio1fa3QYq24gX",
-};
-
-const SERVICES = [
-  { slug: "tryScuba", href: "/try-scuba", img: IMG.tryScuba },
-  { slug: "guidedDives", href: "/guided-dives", img: IMG.guidedDives },
-  { slug: "snorkeling", href: "/snorkeling", img: IMG.snorkeling },
-  { slug: "privateTours", href: "/private-tours", img: IMG.privateTours },
-  { slug: "sunset", href: "/sunset", img: IMG.sunset },
-  { slug: "courses", href: "/courses", img: IMG.courses },
-] as const;
-
-const USP_ICONS = [
-  "history",
-  "verified_user",
-  "groups",
-  "star",
-  "architecture",
-  "sailing",
-  "map",
-  "diversity_3",
-] as const;
-
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Diving+Center+Chia/@38.9323932,8.9289899,17z/data=!4m6!3m5!1s0x12e6ddd752aa2703:0xc6a4af58b6eced96!8m2!3d38.9311547!4d8.9283656!16s%2Fg%2F11btvb7gjz";
-const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/Diving+Center+Chia/@38.9311547,8.9283656,17z#lrd=0x12e6ddd752aa2703:0xc6a4af58b6eced96,1";
+import GoldLabel from "@/components/GoldLabel";
+import MapSection from "@/components/MapSection";
+import { getWhatsAppLink, getWhatsAppLinkWithData } from "@/lib/whatsapp";
 
 export default function HomePage() {
+  const t = useTranslations();
   const locale = useLocale();
-  const lp = (path: string) => `/${locale}${path}`;
 
-  const heroT = useTranslations("hero");
-  const trustT = useTranslations("trustbar");
-  const svcT = useTranslations("services");
-  const uspT = useTranslations("usp");
-  const magT = useTranslations("magazine");
-  const testT = useTranslations("testimonials");
-  const locT = useTranslations("location");
-  const bookT = useTranslations("booking");
-  const faqT = useTranslations("faq");
+  const [formData, setFormData] = useState({
+    nome: "",
+    telefono: "",
+    data: "",
+    persone: "",
+    attivita: "",
+    livello: "",
+    hotel: "",
+  });
 
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }
 
-  const trustItems = [
-    trustT("since1996"),
-    trustT("licensed"),
-    trustT("smallGroups"),
-    trustT("instructors"),
-    trustT("safety"),
-  ];
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const url = getWhatsAppLinkWithData({
+      nome: formData.nome,
+      telefono: formData.telefono,
+      data: formData.data,
+      persone: formData.persone,
+      attivita: formData.attivita,
+      livello: formData.livello,
+      hotel: formData.hotel,
+    });
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+
+  const services = [
+    { key: "tryScuba", href: "/try-scuba" },
+    { key: "guidedDives", href: "/guided-dives" },
+    { key: "snorkeling", href: "/snorkeling" },
+    { key: "privateTours", href: "/private-tours" },
+    { key: "sunset", href: "/sunset" },
+    { key: "courses", href: "/courses" },
+  ] as const;
+
+  const reasons = [
+    "since1996",
+    "smallGroups",
+    "equipment",
+    "custom",
+    "safetyFirst",
+    "local",
+  ] as const;
+
+  const trustBar = [
+    "since1996",
+    "smallGroups",
+    "premium",
+    "safety",
+  ] as const;
+
+  const timeline = [
+    { icon: "☀️", key: "0" },
+    { icon: "⛵", key: "1" },
+    { icon: "🤿", key: "2" },
+    { icon: "📸", key: "3" },
+  ] as const;
+
+  const testimonials = t.raw("testimonials.items") as Array<{
+    quote: string;
+    name: string;
+    from: string;
+    stars: number;
+  }>;
+
+  const peopleOptions = t.raw("booking.people_options") as string[];
+  const activityOptions = t.raw("booking.activity_options") as string[];
+  const levelOptions = t.raw("booking.level_options") as string[];
 
   return (
-    <main className="selection:bg-[#6fceff]/30">
+    <main>
       <Navbar />
 
       {/* ═══════════════════════════════════════════
-          1. FULL-BLEED HERO
+          SECTION 1 — HERO
           ═══════════════════════════════════════════ */}
-      <section className="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={IMG.hero}
-            alt="Luxury boat on turquoise waters of Sardinia"
-            className="w-full h-full object-cover brightness-[0.6]"
+      <section className="relative min-h-[100dvh] w-full overflow-hidden flex items-end md:items-center" id="hero">
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(135deg, #0D1B2A 0%, #1a3557 50%, #2a5a8c 100%)",
+            zIndex: 0,
+          }}
+        />
+        <video
+          autoPlay muted loop playsInline
+          className="absolute inset-0 min-h-[100dvh] min-w-[100dvw] object-cover object-center"
+          style={{ zIndex: 1 }}
+        >
+          <source src="/videos/whatsapp-video.mp4" type="video/mp4" />
+        </video>
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to bottom, rgba(13,27,42,0.35) 0%, rgba(13,27,42,0.15) 30%, rgba(13,27,42,0.55) 70%, rgba(13,27,42,0.75) 100%)",
+            zIndex: 2,
+          }}
+        />
+        <div
+          className="relative w-full flex flex-col items-start px-5 pb-12 pt-24 text-left md:items-start md:px-20 lg:px-24 md:pb-16 md:pt-16 max-w-[900px]"
+          style={{ zIndex: 3 }}
+        >
+          <span
+            className="mb-4 md:mb-6 block h-px gold-line-animate"
+            style={{ backgroundColor: "#C9A84C", width: "40px" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000d22]/40 via-transparent to-[#000d22]/60" />
-        </div>
-        <div className="relative z-10 px-6 md:px-16 max-w-5xl text-center w-full pt-24 pb-16 md:pt-0 md:pb-0">
-          <h1 className="font-serif text-white mb-6 md:mb-8 leading-[1.08] text-[clamp(2.4rem,8vw,6rem)] font-normal">
-            {heroT("titleLine1")}<br />
-            {heroT("titleLine2")}<br />
-            {heroT("titleLine3")}
+          <span
+            className="mb-3 md:mb-6 font-jost text-[10px] md:text-[11px] font-normal uppercase tracking-[0.2em]"
+            style={{ color: "rgba(255,255,255,0.7)" }}
+          >
+            {t("hero.eyebrow")}
+          </span>
+          <h1
+            className="mb-4 md:mb-6 font-cormorant text-[36px] md:text-[64px] lg:text-[80px] font-light leading-[1.08] tracking-[-0.02em]"
+            style={{ color: "#FAFAF8" }}
+          >
+            {t("hero.title")}
           </h1>
-          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-light px-2">
-            {heroT("subtitle")}
+          <p
+            className="mb-8 md:mb-10 max-w-[560px] font-jost text-[15px] md:text-[18px] font-light leading-[1.6] md:leading-[1.8]"
+            style={{ color: "rgba(255,255,255,0.85)", whiteSpace: "pre-line" }}
+          >
+            {t("hero.subtitle")}{"\n\n"}{t("hero.description")}
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-6 items-center justify-center w-full px-2">
+          <div className="flex flex-col w-full gap-3 sm:flex-row sm:w-auto sm:gap-4">
             <a
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-[#0a2342] text-white px-8 py-4 font-serif text-xs tracking-[0.1em] uppercase hover:bg-[#006689] transition-colors text-center"
+              className="flex items-center justify-center px-8 py-4 font-jost text-[12px] font-normal uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-90"
+              style={{ backgroundColor: "#25D366" }}
             >
-              {heroT("ctaWhatsApp")}
+              {t("hero.cta_whatsapp")}
             </a>
             <Link
-              href={lp("/#esperienze")}
-              className="w-full sm:w-auto border border-white text-white px-8 py-4 font-serif text-xs tracking-[0.1em] uppercase hover:bg-white hover:text-[#000d22] transition-all text-center"
+              href="#esperienze"
+              className="flex items-center justify-center border px-8 py-4 font-jost text-[12px] font-normal uppercase tracking-[0.15em] transition-colors duration-300"
+              style={{
+                borderColor: "rgba(255,255,255,0.6)",
+                color: "#FAFAF8",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#FAFAF8";
+                e.currentTarget.style.color = "#0D1B2A";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                e.currentTarget.style.color = "#FAFAF8";
+              }}
             >
-              {heroT("ctaAvailability")}
-            </Link>
-            <Link
-              href={lp("/#esperienze")}
-              className="hidden sm:flex font-serif text-xs tracking-[0.1em] text-white items-center gap-2 group uppercase"
-            >
-              {heroT("ctaExplore")}
-              <span className="text-sm group-hover:translate-x-2 transition-transform">→</span>
+              {t("hero.cta_explore")}
             </Link>
           </div>
+          <p
+            className="mt-4 font-jost text-[11px] font-light uppercase tracking-[0.1em]"
+            style={{ color: "rgba(255,255,255,0.5)" }}
+          >
+            {t("hero.tags")}
+          </p>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          2. TRUST BAR (Marquee)
+          SECTION 2 — TRUST BAR
           ═══════════════════════════════════════════ */}
-      <section className="bg-[#0a2342] py-8 overflow-hidden whitespace-nowrap border-y border-white/10">
-        <div className="flex animate-marquee gap-24 items-center">
-          {[0, 1].map((dup) => (
-            <div key={dup} className="flex gap-24 items-center flex-shrink-0">
-              {trustItems.map((item, i) => (
-                <div key={i} className="flex items-center gap-24">
-                  <span className="font-serif text-white text-sm tracking-[0.12em] uppercase">{item}</span>
-                  <div className="w-1 h-1 bg-[#006689] rounded-full flex-shrink-0" />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          3. SERVICES (3x2 Grid)
-          ═══════════════════════════════════════════ */}
-      <section id="esperienze" className="px-5 md:px-16 py-16 md:py-32 max-w-[1440px] mx-auto">
-        <ScrollReveal className="flex flex-col items-center mb-10 md:mb-20 text-center">
-          <h2 className="font-serif text-[#000d22] mb-4 text-3xl md:text-5xl font-normal">{svcT("title")}</h2>
-          <div className="editorial-rule max-w-[200px] mb-6" />
-          <p className="text-base text-[#44474e] max-w-2xl leading-relaxed">{svcT("subtitle")}</p>
-        </ScrollReveal>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-          {SERVICES.map(({ slug, href, img }, i) => (
-            <ScrollReveal key={slug} delay={i * 0.1}>
-              <div className="group cursor-pointer">
-                <div className="relative aspect-[4/5] overflow-hidden mb-6 bg-[#e9e7eb]">
-                  <img
-                    src={img}
-                    alt={svcT(`items.${slug}.title`)}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <h3 className="font-serif text-[#000d22] mb-2 text-2xl md:text-3xl font-normal">
-                  {svcT(`items.${slug}.title`)}
-                </h3>
-                <p className="text-base text-[#44474e] mb-3 leading-relaxed">
-                  {svcT(`items.${slug}.description`)}
-                </p>
-                <div className="flex flex-col gap-2">
-                  <span className="font-serif text-xs tracking-[0.1em] uppercase text-[#006689]">
-                    {svcT(`items.${slug}.price`)}
-                  </span>
-                  <Link
-                    href={lp(href)}
-                    className="font-serif text-xs tracking-[0.1em] uppercase text-[#000d22] flex items-center gap-1 group-hover:text-[#006689] transition-colors"
-                  >
-                    {svcT(`items.${slug}.discover`)}
-                    <span className="material-symbols-outlined text-sm" style={{ fontSize: "16px" }}>arrow_forward</span>
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          4. WHY CHOOSE US (8 Pillars)
-          ═══════════════════════════════════════════ */}
-      <section className="bg-[#F8F6F1] px-5 md:px-16 py-14 md:py-24">
-        <div className="max-w-[1440px] mx-auto">
-          <h2 className="font-serif text-[#000d22] text-center mb-10 md:mb-20 uppercase tracking-widest text-2xl md:text-4xl font-normal">
-            {uspT("title")}
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-16 gap-x-6 md:gap-x-12">
-            {USP_ICONS.map((icon, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="flex flex-col items-center text-center">
-                  <span
-                    className="material-symbols-outlined text-[#006689] mb-4"
-                    style={{ fontSize: "40px", fontVariationSettings: "'wght' 300" }}
-                  >
-                    {icon}
-                  </span>
-                  <h4 className="font-serif text-xs tracking-[0.1em] uppercase text-[#000d22] mb-2">
-                    {uspT(`items.${i}.label`)}
-                  </h4>
-                  <p className="font-serif text-xs text-[#44474e] max-w-[160px] leading-relaxed">
-                    {uspT(`items.${i}.description`)}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          5. MAGAZINE SPREAD
-          ═══════════════════════════════════════════ */}
-      <section className="py-16 md:py-32 overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-0 items-center">
-          <div className="md:col-span-7 aspect-[16/9] overflow-hidden">
-            <img
-              src={IMG.magazine}
-              alt="Private boat experience in Sardinia"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="md:col-span-5 px-5 md:px-16 py-10 md:py-12">
-            <div className="max-w-md">
-              <span className="font-serif text-xs tracking-[0.1em] uppercase text-[#006689] mb-4 block">
-                {magT("label")}
-              </span>
-              <h2 className="font-serif text-[#000d22] mb-6 text-3xl md:text-4xl font-normal">
-                {magT("title")}
-              </h2>
-              <p className="text-lg text-[#44474e] mb-8 italic leading-relaxed">
-                {magT("quote")}
-              </p>
-              <p className="text-base text-[#44474e] mb-8 leading-relaxed">
-                {magT("description")}
-              </p>
-              <Link
-                href={lp("/private-tours")}
-                className="border-b-2 border-[#000d22] py-2 font-serif text-xs tracking-[0.1em] uppercase text-[#000d22] hover:text-[#006689] hover:border-[#006689] transition-all"
+      <section style={{ backgroundColor: "#F2F0EB" }} className="py-5 md:py-8">
+        <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-6 px-6 md:grid-cols-4 lg:px-8">
+          {trustBar.map((key) => (
+            <div key={key} className="text-center">
+              <span
+                className="block font-jost text-[11px] md:text-[13px] font-medium uppercase tracking-[0.1em]"
+                style={{ color: "#1a1a1a" }}
               >
-                {magT("cta")}
-              </Link>
+                {t(`trustBar.${key}.title`)}
+              </span>
+              <span
+                className="block font-jost text-[11px] md:text-[12px] font-light mt-1"
+                style={{ color: "#6b6b6b" }}
+              >
+                {t(`trustBar.${key}.subtitle`)}
+              </span>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          6. TESTIMONIALS (Google Reviews)
+          SECTION 2B — INTRO
           ═══════════════════════════════════════════ */}
-      <section className="bg-white px-5 md:px-16 py-16 md:py-32">
-        <div className="max-w-[1440px] mx-auto">
+      <section style={{ backgroundColor: "#FAFAF8" }} className="py-16 md:py-40 lg:py-48">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <ScrollReveal className="text-center">
+            <GoldLabel>{t("intro.eyebrow")}</GoldLabel>
+            <h2
+              className="mt-4 font-cormorant text-[28px] md:text-[48px] lg:text-[64px] font-light leading-[1.15] tracking-[-0.01em]"
+              style={{ color: "#1a1a1a" }}
+            >
+              {t("intro.title")}
+            </h2>
+            <p
+              className="mx-auto mt-6 max-w-[700px] font-jost text-[15px] md:text-[18px] font-light leading-[1.8]"
+              style={{ color: "#6b6b6b", whiteSpace: "pre-line" }}
+            >
+              {t("intro.description")}
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
 
-          {/* Google Rating Badge */}
-          <ScrollReveal className="flex flex-col items-center mb-16 text-center">
-            <div className="flex items-center gap-4 mb-3">
-              <img src="https://www.google.com/favicon.ico" alt="Google" className="w-6 h-6" />
-              <span className="font-serif text-xs tracking-[0.15em] uppercase text-[#44474e]">{testT("platform")}</span>
-            </div>
-            <div className="flex items-center gap-3 mb-2">
-              <span className="font-serif text-5xl md:text-6xl font-normal text-[#000d22]">{testT("rating")}</span>
-              <div className="flex flex-col">
-                <div className="flex gap-1">
-                  {[1,2,3,4,5].map((s) => (
-                    <span key={s} className="material-symbols-outlined text-[#FFD700]"
-                      style={{ fontSize: "22px", fontVariationSettings: "'FILL' 1" }}>star</span>
-                  ))}
-                </div>
-                <span className="font-serif text-xs tracking-widest uppercase text-[#44474e] mt-1">{testT("count")} recensioni</span>
-              </div>
-            </div>
+      {/* ═══════════════════════════════════════════
+          SECTION 3 — SERVICES
+          ═══════════════════════════════════════════ */}
+      <section
+        id="esperienze"
+        style={{ backgroundColor: "#FAFAF8" }}
+        className="py-16 md:py-40 lg:py-48"
+      >
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <ScrollReveal className="mb-10 md:mb-16 text-center md:mb-20">
+            <GoldLabel>{t("services.eyebrow")}</GoldLabel>
+            <h2
+              className="font-cormorant text-[28px] md:text-[48px] lg:text-[64px] font-light leading-[1.15] tracking-[-0.01em]"
+              style={{ color: "#1a1a1a" }}
+            >
+              {t("services.title")}
+            </h2>
+            <p
+              className="mx-auto mt-6 max-w-[700px] font-jost text-[15px] md:text-[18px] font-light leading-[1.8]"
+              style={{ color: "#6b6b6b" }}
+            >
+              {t("services.description")}
+            </p>
           </ScrollReveal>
 
-          {/* Review Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mb-10 md:mb-14">
-            {[0, 1, 2].map((i) => (
-              <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="border border-[#E8DCC8] p-6 md:p-10 flex flex-col h-full">
-                  {/* Stars */}
-                  <div className="flex gap-1 text-[#FFD700] mb-5">
-                    {[1,2,3,4,5].map((s) => (
-                      <span key={s} className="material-symbols-outlined"
-                        style={{ fontSize: "18px", fontVariationSettings: "'FILL' 1, 'wght' 300" }}>star</span>
+          <div className="flex flex-col">
+            {services.map((svc, i) => (
+              <ScrollReveal key={svc.key} delay={i * 0.1}>
+                <Link
+                  href={`/${locale}${svc.href}`}
+                  className="group flex flex-col gap-2 border-b py-6 transition-colors duration-200 md:flex-row md:items-center md:py-10 md:gap-0"
+                  style={{ borderColor: "#E5E3DE" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#F2F0EB";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                  }}
+                >
+                  <span
+                    className="shrink-0 font-cormorant text-[40px] md:text-[64px] font-light leading-none md:w-[120px] lg:text-[80px]"
+                    style={{ color: "#E5E3DE" }}
+                  >
+                    {t(`services.items.${svc.key}.num`)}
+                  </span>
+                  <div className="flex-1">
+                    <h3
+                      className="font-cormorant text-[22px] md:text-[24px] font-medium leading-[1.3] lg:text-[32px]"
+                      style={{ color: "#1a1a1a" }}
+                    >
+                      {t(`services.items.${svc.key}.name`)}
+                    </h3>
+                    <p
+                      className="mt-2 max-w-[520px] font-jost text-[15px] font-light leading-[1.8]"
+                      style={{ color: "#6b6b6b", whiteSpace: "pre-line" }}
+                    >
+                      {t(`services.items.${svc.key}.desc`)}
+                    </p>
+                  </div>
+                  <span
+                    className="shrink-0 font-jost text-[12px] font-light transition-transform duration-200 group-hover:translate-x-1 md:ml-4"
+                    style={{ color: "#C9A84C" }}
+                  >
+                    {t(`services.items.${svc.key}.cta`)}
+                  </span>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 4 — WHY CHOOSE US
+          ═══════════════════════════════════════════ */}
+      <section style={{ backgroundColor: "#F2F0EB" }} className="py-16 md:py-40 lg:py-48">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <ScrollReveal className="mb-10 md:mb-16 text-center md:mb-20">
+            <GoldLabel>{t("whyUs.eyebrow")}</GoldLabel>
+            <h2
+              className="font-cormorant text-[36px] font-light leading-[1.15] tracking-[-0.01em] md:text-[48px] lg:text-[64px]"
+              style={{ color: "#1a1a1a" }}
+            >
+              {t("whyUs.title")}
+            </h2>
+            <p
+              className="mx-auto mt-6 max-w-[600px] font-jost text-[15px] md:text-[18px] font-light leading-[1.8]"
+              style={{ color: "#6b6b6b", whiteSpace: "pre-line" }}
+            >
+              {t("whyUs.description")}
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {reasons.map((key, i) => {
+              const isLastCol = (i + 1) % 3 === 0;
+              const isFirstRow = i < 3;
+              return (
+                <ScrollReveal
+                  key={key}
+                  delay={i * 0.15}
+                  className="relative px-4 py-6 md:py-10 md:px-8 lg:px-10"
+                >
+                  {!isLastCol && (
+                    <div
+                      className="absolute right-0 top-0 bottom-0 hidden w-px lg:block"
+                      style={{ backgroundColor: "#E5E3DE" }}
+                    />
+                  )}
+                  {isFirstRow && i < 3 && (
+                    <div
+                      className="absolute right-0 bottom-0 left-0 hidden h-px lg:block"
+                      style={{ backgroundColor: "#E5E3DE" }}
+                    />
+                  )}
+                  <span
+                    className="mb-2 md:mb-4 block font-cormorant text-[36px] md:text-[48px] font-light leading-none"
+                    style={{ color: "#C9A84C" }}
+                  >
+                    {t(`whyUs.items.${key}.num`)}
+                  </span>
+                  <span
+                    className="mb-3 block font-jost text-[13px] font-medium uppercase tracking-[0.1em]"
+                    style={{ color: "#1a1a1a" }}
+                  >
+                    {t(`whyUs.items.${key}.label`)}
+                  </span>
+                  <p
+                    className="font-jost text-[15px] font-light leading-[1.8]"
+                    style={{ color: "#6b6b6b" }}
+                  >
+                    {t(`whyUs.items.${key}.desc`)}
+                  </p>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 4A — MAPPA
+          ═══════════════════════════════════════════ */}
+      <MapSection />
+
+      {/* ═══════════════════════════════════════════
+          SECTION 4B — TIMELINE
+          ═══════════════════════════════════════════ */}
+      <section style={{ backgroundColor: "#FAFAF8" }} className="py-16 md:py-32 lg:py-40">
+        <div className="mx-auto max-w-[800px] px-6 lg:px-8">
+          <ScrollReveal className="mb-10 md:mb-16 text-center">
+            <GoldLabel>{t("timeline.eyebrow")}</GoldLabel>
+            <h2
+              className="font-cormorant text-[28px] md:text-[48px] lg:text-[56px] font-light leading-[1.15] tracking-[-0.01em] mb-4"
+              style={{ color: "#1a1a1a" }}
+            >
+              {t("timeline.title")}
+            </h2>
+          </ScrollReveal>
+
+          <div className="relative">
+            <div
+              className="absolute left-[23px] md:left-[27px] top-0 bottom-0 w-px"
+              style={{ backgroundColor: "#E5E3DE" }}
+            />
+            <div className="flex flex-col gap-0">
+              {timeline.map((step, i) => (
+                <ScrollReveal key={step.key} delay={i * 0.12}>
+                  <div className="relative flex gap-5 md:gap-8 pb-10 md:pb-14 last:pb-0">
+                    <div className="relative z-10 flex flex-col items-center shrink-0">
+                      <div
+                        className="flex h-[48px] w-[48px] md:h-[56px] md:w-[56px] items-center justify-center rounded-full text-[20px] md:text-[24px]"
+                        style={{ backgroundColor: "#F2F0EB" }}
+                      >
+                        {step.icon}
+                      </div>
+                    </div>
+                    <div className="pt-1">
+                      <h3
+                        className="font-cormorant text-[22px] md:text-[28px] font-medium leading-[1.2] mb-2"
+                        style={{ color: "#1a1a1a" }}
+                      >
+                        {t(`timeline.steps.${step.key}.title`)}
+                      </h3>
+                      <p
+                        className="font-jost text-[14px] md:text-[15px] font-light leading-[1.7]"
+                        style={{ color: "#6b6b6b", whiteSpace: "pre-line" }}
+                      >
+                        {t(`timeline.steps.${step.key}.desc`)}
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 4C — SAFETY
+          ═══════════════════════════════════════════ */}
+      <section style={{ backgroundColor: "#0D1B2A" }} className="py-16 md:py-40 lg:py-48">
+        <div className="mx-auto max-w-[800px] px-6 lg:px-8">
+          <ScrollReveal className="text-center">
+            <GoldLabel>{t("safety.eyebrow")}</GoldLabel>
+            <h2
+              className="mt-4 font-cormorant text-[28px] md:text-[48px] lg:text-[56px] font-light leading-[1.15] tracking-[-0.01em]"
+              style={{ color: "#FAFAF8" }}
+            >
+              {t("safety.title")}
+            </h2>
+            <p
+              className="mx-auto mt-6 max-w-[600px] font-jost text-[15px] md:text-[18px] font-light leading-[1.8]"
+              style={{ color: "rgba(255,255,255,0.7)", whiteSpace: "pre-line" }}
+            >
+              {t("safety.description")}
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 4D — TESTIMONIALS
+          ═══════════════════════════════════════════ */}
+      <section style={{ backgroundColor: "#F2F0EB" }} className="py-16 md:py-32 lg:py-40">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <ScrollReveal className="mb-10 md:mb-16 text-center">
+            <GoldLabel>{t("testimonials.eyebrow")}</GoldLabel>
+            <h2
+              className="font-cormorant text-[28px] md:text-[48px] lg:text-[56px] font-light leading-[1.15] tracking-[-0.01em]"
+              style={{ color: "#1a1a1a" }}
+            >
+              {t("testimonials.title")}
+            </h2>
+            <p
+              className="mx-auto mt-4 max-w-[700px] font-jost text-[15px] md:text-[18px] font-light leading-[1.8]"
+              style={{ color: "#6b6b6b" }}
+            >
+              {t("testimonials.description")}
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {testimonials.map((item, i) => (
+              <ScrollReveal key={item.name} delay={i * 0.1}>
+                <div
+                  className="flex flex-col justify-between p-6 md:p-10 h-full"
+                  style={{ backgroundColor: "#FAFAF8" }}
+                >
+                  <div className="mb-4 flex gap-1">
+                    {Array.from({ length: item.stars }).map((_, si) => (
+                      <span key={si} style={{ color: "#C9A84C" }} className="text-[16px]">
+                        ★
+                      </span>
                     ))}
                   </div>
-                  {/* Quote icon */}
-                  <div className="text-[#1A8FBD] mb-3">
-                    <span className="material-symbols-outlined"
-                      style={{ fontSize: "48px", fontVariationSettings: "'FILL' 1, 'wght' 300" }}>
-                      format_quote
+                  <blockquote
+                    className="mb-6 font-cormorant text-[18px] md:text-[22px] font-light italic leading-[1.5]"
+                    style={{ color: "#1a1a1a" }}
+                  >
+                    &ldquo;{item.quote}&rdquo;
+                  </blockquote>
+                  <div>
+                    <span
+                      className="block font-jost text-[14px] font-normal"
+                      style={{ color: "#1a1a1a" }}
+                    >
+                      {item.name}
                     </span>
-                  </div>
-                  {/* Text */}
-                  <p className="font-serif text-[#000d22] text-lg leading-relaxed font-normal flex-1 mb-6">
-                    {testT(`items.${i}.text`)}
-                  </p>
-                  {/* Author */}
-                  <div className="flex items-center gap-3 mt-auto pt-4 border-t border-[#E8DCC8]">
-                    <img className="w-8 h-5 object-cover rounded-sm" src={testT(`items.${i}.flag`)} alt="" />
-                    <div>
-                      <span className="font-serif text-xs tracking-[0.1em] uppercase text-[#000d22] font-medium block">
-                        {testT(`items.${i}.author`)}
-                      </span>
-                      <span className="font-serif text-[11px] tracking-widest uppercase text-[#44474e]">
-                        {testT(`items.${i}.origin`)}
-                      </span>
-                    </div>
-                    {/* Google logo */}
-                    <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4 ml-auto opacity-50" />
+                    <span
+                      className="font-jost text-[12px] font-light"
+                      style={{ color: "#9a9a9a" }}
+                    >
+                      {item.from}
+                    </span>
                   </div>
                 </div>
               </ScrollReveal>
             ))}
           </div>
 
-          {/* Read all reviews CTA */}
-          <div className="flex justify-center">
+          <ScrollReveal className="mt-12 text-center">
             <a
-              href={GOOGLE_REVIEWS_URL}
+              href="https://www.google.com/search?q=diving+chia"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 border border-[#c4c6cf] px-8 py-4 font-serif text-xs tracking-[0.12em] uppercase text-[#000d22] hover:border-[#000d22] transition-colors group"
+              className="inline-flex items-center justify-center border px-8 py-4 font-jost text-[12px] font-normal uppercase tracking-[0.15em] transition-colors duration-300"
+              style={{
+                borderColor: "#1a1a1a",
+                color: "#1a1a1a",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#1a1a1a";
+                e.currentTarget.style.color = "#FAFAF8";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                e.currentTarget.style.color = "#1a1a1a";
+              }}
             >
-              <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4" />
-              {testT("readAll")}
-              <span className="material-symbols-outlined text-[#006689] group-hover:translate-x-1 transition-transform"
-                style={{ fontSize: "16px" }}>arrow_forward</span>
+              {t("testimonials.cta")} &rarr;
             </a>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          6b. LOCATION + MAP
+          SECTION 4E — QUOTES
           ═══════════════════════════════════════════ */}
-      <section className="bg-[#F8F6F1]">
-        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
-          {/* Map embed */}
-          <div className="relative min-h-[340px] md:min-h-[480px]">
-            <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=8.9220%2C38.9280%2C8.9360%2C38.9360&layer=mapnik&marker=38.9311547%2C8.9283656"
-              className="w-full h-full border-0 min-h-[340px]"
-              loading="lazy"
-              title="Diving Center Chia — Mappa"
-            />
-          </div>
-
-          {/* Info card */}
-          <div className="flex flex-col justify-center px-8 py-16 md:px-14 lg:px-20">
-            <span className="font-serif text-[11px] tracking-[0.2em] uppercase text-[#006689] mb-5 block">
-              {locT("tag")}
-            </span>
-            <h2 className="font-serif text-[#000d22] text-3xl md:text-4xl font-normal leading-[1.2] mb-6">
-              {locT("title")}
+      <section style={{ backgroundColor: "#FAFAF8" }} className="py-16 md:py-40 lg:py-48">
+        <div className="mx-auto max-w-[800px] px-6 lg:px-8">
+          <ScrollReveal className="text-center">
+            <GoldLabel>{t("quotes.eyebrow")}</GoldLabel>
+            <h2
+              className="mt-4 font-cormorant text-[28px] md:text-[48px] lg:text-[56px] font-light leading-[1.15] tracking-[-0.01em]"
+              style={{ color: "#1a1a1a" }}
+            >
+              {t("quotes.title")}
             </h2>
-            <div className="w-12 h-px bg-[#E8DCC8] mb-8" />
-
-            <div className="space-y-4 mb-10">
-              {/* Address */}
-              <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-[#006689] flex-shrink-0"
-                  style={{ fontSize: "20px", fontVariationSettings: "'wght' 300" }}>location_on</span>
-                <div>
-                  <p className="font-serif text-[#000d22] text-sm leading-relaxed">{locT("address")}</p>
-                  <p className="font-serif text-[#44474e] text-sm">{locT("region")}</p>
-                </div>
-              </div>
-              {/* Phone */}
-              <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#006689] flex-shrink-0"
-                  style={{ fontSize: "20px", fontVariationSettings: "'wght' 300" }}>call</span>
-                <a href="tel:+393388585504" className="font-serif text-[#000d22] text-sm hover:text-[#006689] transition-colors">
-                  {locT("phone")}
-                </a>
-              </div>
-              {/* Season */}
-              <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#006689] flex-shrink-0"
-                  style={{ fontSize: "20px", fontVariationSettings: "'wght' 300" }}>calendar_month</span>
-                <p className="font-serif text-[#44474e] text-sm">{locT("season")}</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <a
-                href={GOOGLE_MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#0a2342] text-white px-7 py-3.5 font-serif text-[11px] tracking-[0.12em] uppercase hover:opacity-80 transition-opacity self-start"
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: "16px" }}>map</span>
-                {locT("directions")}
-              </a>
+            <p
+              className="mx-auto mt-6 max-w-[600px] font-jost text-[15px] md:text-[18px] font-light leading-[1.8]"
+              style={{ color: "#6b6b6b", whiteSpace: "pre-line" }}
+            >
+              {t("quotes.description")}
+            </p>
+            <p
+              className="mx-auto mt-6 max-w-[600px] font-jost text-[16px] md:text-[18px] font-light italic leading-[1.7]"
+              style={{ color: "#1a1a1a" }}
+            >
+              {t("quotes.note")}
+            </p>
+            <div className="mt-10 flex flex-col items-center gap-3">
               <a
                 href={getWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[#25D366] border border-[#25D366] px-7 py-3.5 font-serif text-[11px] tracking-[0.12em] uppercase hover:bg-[#25D366] hover:text-white transition-all self-start"
+                className="inline-flex items-center justify-center px-8 py-4 font-jost text-[12px] font-normal uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-90"
+                style={{ backgroundColor: "#25D366" }}
               >
-                <svg className="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
-                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.887-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.556-5.332 11.89-11.888 11.89-2.015 0-3.991-.51-5.741-1.478l-6.251 1.638zm5.921-4.45s.262.155.612.366c1.39.832 3.004 1.27 4.683 1.27 4.901 0 8.89-3.988 8.89-8.89 0-2.378-.925-4.612-2.607-6.294s-3.915-2.607-6.292-2.607c-4.902 0-8.89 3.991-8.89 8.892 0 1.735.502 3.426 1.453 4.888l.348.534-1.074 3.92 4.024-1.053z"/>
-                </svg>
-                {locT("whatsapp")}
+                {t("quotes.cta")}
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          7. BOOKING STRIP
-          ═══════════════════════════════════════════ */}
-      <section className="bg-[#0a2342] py-20 md:py-32 px-5 md:px-16 text-center">
-        <h2 className="font-serif text-white mb-8 md:mb-12 text-[clamp(2.5rem,8vw,5.25rem)] font-normal leading-[1.1]">
-          {bookT("title")}
-        </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-          <a
-            href={getWhatsAppLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#25D366] text-white px-12 py-6 font-serif text-xs tracking-[0.1em] uppercase flex items-center gap-4 hover:brightness-110 transition-all shadow-xl"
-          >
-            <svg className="w-8 h-8 fill-current flex-shrink-0" viewBox="0 0 24 24">
-              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.887-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.556-5.332 11.89-11.888 11.89-2.015 0-3.991-.51-5.741-1.478l-6.251 1.638zm5.921-4.45s.262.155.612.366c1.39.832 3.004 1.27 4.683 1.27 4.901 0 8.89-3.988 8.89-8.89 0-2.378-.925-4.612-2.607-6.294s-3.915-2.607-6.292-2.607c-4.902 0-8.89 3.991-8.89 8.892 0 1.735.502 3.426 1.453 4.888l.348.534-1.074 3.92 4.024-1.053z" />
-            </svg>
-            {bookT("ctaWhatsApp")}
-          </a>
-          <div className="text-white/60 font-serif text-xs tracking-[0.1em] uppercase">
-            {bookT("orCall")}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          8. FAQ
-          ═══════════════════════════════════════════ */}
-      <section className="px-5 md:px-16 py-16 md:py-32 max-w-4xl mx-auto">
-        <h2 className="font-serif text-[#000d22] text-center mb-10 md:mb-16 text-2xl md:text-4xl font-normal">
-          {faqT("title")}
-        </h2>
-        <div className="space-y-2">
-          {Array.from({ length: 7 }, (_, i) => (
-            <div key={i} className="border-b border-[#c4c6cf] py-6">
-              <button
-                className="flex w-full justify-between items-center text-left gap-4"
-                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+              <span
+                className="font-jost text-[11px] font-light"
+                style={{ color: "#9a9a9a" }}
               >
-                <h4 className="text-lg font-normal text-[#000d22] leading-snug">{faqT(`items.${i}.q`)}</h4>
-                <span
-                  className="material-symbols-outlined text-[#006689] flex-shrink-0 transition-transform"
-                  style={{
-                    transform: openFaq === i ? "rotate(45deg)" : "rotate(0deg)",
-                    fontVariationSettings: "'wght' 300",
-                    fontSize: "24px",
-                  }}
-                >
-                  add
-                </span>
-              </button>
-              {openFaq === i && (
-                <p className="mt-4 text-base text-[#44474e] leading-relaxed">
-                  {faqT(`items.${i}.a`)}
-                </p>
-              )}
+                {t("quotes.cta_sub")}
+              </span>
             </div>
-          ))}
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 5 — BIG QUOTE
+          ═══════════════════════════════════════════ */}
+      <section
+        style={{ backgroundColor: "#0D1B2A" }}
+        className="py-16 md:py-40 lg:py-48"
+      >
+        <div className="mx-auto max-w-[800px] px-6 text-center lg:px-8">
+          <ScrollReveal>
+            <blockquote
+              className="font-cormorant text-[24px] md:text-[48px] lg:text-[56px] font-light italic leading-[1.3]"
+              style={{ color: "#FAFAF8" }}
+            >
+              {t("whyUs.quote")}
+            </blockquote>
+          </ScrollReveal>
+          <ScrollReveal delay={0.3}>
+            <p
+              className="mt-8 font-jost text-[15px] font-light"
+              style={{ color: "#9a9a9a" }}
+            >
+              {t("whyUs.quoteEn")}
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 6 — BOOKING FORM
+          ═══════════════════════════════════════════ */}
+      <section
+        id="prenota"
+        style={{ backgroundColor: "#FAFAF8" }}
+        className="py-16 md:py-40 lg:py-48"
+      >
+        <div className="mx-auto max-w-[800px] px-6 lg:px-8">
+          <ScrollReveal className="mb-8 md:mb-12 text-center md:mb-16">
+            <GoldLabel>{t("booking.eyebrow")}</GoldLabel>
+            <h2
+              className="mb-4 font-cormorant text-[28px] md:text-[48px] lg:text-[56px] font-light leading-[1.15] tracking-[-0.01em]"
+              style={{ color: "#1a1a1a" }}
+            >
+              {t("booking.title")}
+            </h2>
+            <p
+              className="mx-auto max-w-[560px] font-jost text-[16px] font-light leading-[1.8]"
+              style={{ color: "#6b6b6b" }}
+            >
+              {t("booking.description")}
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <div>
+                <label
+                  className="mb-2 block font-jost text-[11px] font-normal uppercase tracking-[0.15em]"
+                  style={{ color: "#6b6b6b" }}
+                >
+                  {t("booking.name")} {t("booking.required")}
+                </label>
+                <input
+                  type="text"
+                  name="nome"
+                  required
+                  value={formData.nome}
+                  onChange={handleChange}
+                  placeholder={t("booking.name_placeholder")}
+                  className="w-full border-b bg-transparent py-3 font-jost text-[15px] font-light outline-none transition-colors duration-200 focus:border-[#C9A84C]"
+                  style={{ borderColor: "#E5E3DE", color: "#1a1a1a" }}
+                />
+              </div>
+
+              <div>
+                <label
+                  className="mb-2 block font-jost text-[11px] font-normal uppercase tracking-[0.15em]"
+                  style={{ color: "#6b6b6b" }}
+                >
+                  {t("booking.phone")} {t("booking.required")}
+                </label>
+                <input
+                  type="tel"
+                  name="telefono"
+                  required
+                  value={formData.telefono}
+                  onChange={handleChange}
+                  placeholder={t("booking.phone_placeholder")}
+                  className="w-full border-b bg-transparent py-3 font-jost text-[15px] font-light outline-none transition-colors duration-200 focus:border-[#C9A84C]"
+                  style={{ borderColor: "#E5E3DE", color: "#1a1a1a" }}
+                />
+              </div>
+
+              <div>
+                <label
+                  className="mb-2 block font-jost text-[11px] font-normal uppercase tracking-[0.15em]"
+                  style={{ color: "#6b6b6b" }}
+                >
+                  {t("booking.date")} {t("booking.required")}
+                </label>
+                <input
+                  type="date"
+                  name="data"
+                  required
+                  value={formData.data}
+                  onChange={handleChange}
+                  className="w-full border-b bg-transparent py-3 font-jost text-[15px] font-light outline-none transition-colors duration-200 focus:border-[#C9A84C]"
+                  style={{ borderColor: "#E5E3DE", color: "#1a1a1a" }}
+                />
+              </div>
+
+              <div>
+                <label
+                  className="mb-2 block font-jost text-[11px] font-normal uppercase tracking-[0.15em]"
+                  style={{ color: "#6b6b6b" }}
+                >
+                  {t("booking.people")}
+                </label>
+                <select
+                  name="persone"
+                  value={formData.persone}
+                  onChange={handleChange}
+                  className="w-full border-b bg-transparent py-3 font-jost text-[15px] font-light outline-none transition-colors duration-200 focus:border-[#C9A84C]"
+                  style={{ borderColor: "#E5E3DE", color: formData.persone ? "#1a1a1a" : "#9a9a9a" }}
+                >
+                  <option value="" disabled>
+                    {t("booking.people_placeholder")}
+                  </option>
+                  {peopleOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label
+                  className="mb-2 block font-jost text-[11px] font-normal uppercase tracking-[0.15em]"
+                  style={{ color: "#6b6b6b" }}
+                >
+                  {t("booking.activity")} {t("booking.required")}
+                </label>
+                <select
+                  name="attivita"
+                  required
+                  value={formData.attivita}
+                  onChange={handleChange}
+                  className="w-full border-b bg-transparent py-3 font-jost text-[15px] font-light outline-none transition-colors duration-200 focus:border-[#C9A84C]"
+                  style={{ borderColor: "#E5E3DE", color: formData.attivita ? "#1a1a1a" : "#9a9a9a" }}
+                >
+                  <option value="" disabled>
+                    {t("booking.activity_placeholder")}
+                  </option>
+                  {activityOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label
+                  className="mb-2 block font-jost text-[11px] font-normal uppercase tracking-[0.15em]"
+                  style={{ color: "#6b6b6b" }}
+                >
+                  {t("booking.level")}
+                </label>
+                <select
+                  name="livello"
+                  value={formData.livello}
+                  onChange={handleChange}
+                  className="w-full border-b bg-transparent py-3 font-jost text-[15px] font-light outline-none transition-colors duration-200 focus:border-[#C9A84C]"
+                  style={{ borderColor: "#E5E3DE", color: formData.livello ? "#1a1a1a" : "#9a9a9a" }}
+                >
+                  <option value="" disabled>
+                    {t("booking.level_placeholder")}
+                  </option>
+                  {levelOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label
+                  className="mb-2 block font-jost text-[11px] font-normal uppercase tracking-[0.15em]"
+                  style={{ color: "#6b6b6b" }}
+                >
+                  {t("booking.hotel")}
+                </label>
+                <input
+                  type="text"
+                  name="hotel"
+                  value={formData.hotel}
+                  onChange={handleChange}
+                  placeholder={t("booking.hotel_placeholder")}
+                  className="w-full border-b bg-transparent py-3 font-jost text-[15px] font-light outline-none transition-colors duration-200 focus:border-[#C9A84C]"
+                  style={{ borderColor: "#E5E3DE", color: "#1a1a1a" }}
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="mt-4 inline-flex items-center justify-center px-8 py-4 font-jost text-[12px] font-normal uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-90"
+                style={{ backgroundColor: "#25D366" }}
+              >
+                {t("booking.submit")}
+              </button>
+            </form>
+          </ScrollReveal>
         </div>
       </section>
 

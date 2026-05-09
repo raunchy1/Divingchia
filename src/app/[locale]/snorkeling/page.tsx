@@ -133,21 +133,15 @@ export default function SnorkelingPage() {
                   </div>
                 </div>
 
-                {/* Price */}
-                <div className="mb-8">
-                  <span className="font-jost text-[13px] font-light uppercase tracking-[0.1em]" style={{ color: "#9a9a9a" }}>
-                    A partire da
-                  </span>
-                  <span
-                    className="ml-3 font-cormorant text-[48px] font-light leading-none"
-                    style={{ color: "#1a1a1a" }}
-                  >
-                    &euro;55
-                  </span>
-                  <span className="ml-1 font-jost text-[13px] font-light" style={{ color: "#9a9a9a" }}>
-                    a persona
-                  </span>
-                </div>
+                <h3
+                  className="mb-6 font-cormorant text-[24px] font-light leading-[1.3]"
+                  style={{ color: "#1a1a1a" }}
+                >
+                  Richiedi la tua offerta personalizzata
+                </h3>
+                <p className="mb-8 font-jost text-[15px] font-light leading-[1.7]" style={{ color: "#6b6b6b" }}>
+                  Ogni uscita viene quotata individualmente in base al numero di persone, all&apos;attività scelta e alle condizioni del mare. Contattaci su WhatsApp per ricevere il tuo preventivo dedicato.
+                </p>
 
                 <a
                   href={getWhatsAppLink()}
@@ -156,7 +150,7 @@ export default function SnorkelingPage() {
                   className="inline-block w-full px-10 py-4 text-center font-jost text-xs font-normal uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-90"
                   style={{ backgroundColor: "#25D366" }}
                 >
-                  Prenota su WhatsApp
+                  CHIEDI OFFERTA SU WHATSAPP
                 </a>
               </div>
             </ScrollReveal>

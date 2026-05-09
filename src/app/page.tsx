@@ -1,5 +1,13 @@
-import { redirect } from 'next/navigation';
-
 export default function RootPage() {
-  redirect('/it');
+  return (
+    <html>
+      <head>
+        <meta httpEquiv="refresh" content="0; url=/it/" />
+        <title>Diving Chia</title>
+      </head>
+      <body>
+        <p>Redirecting to <a href="/it/">Italian version</a>...</p>
+      </body>
+    </html>
+  );
 }

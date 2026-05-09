@@ -1,163 +1,176 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
-import { getWhatsAppLink } from "@/lib/whatsapp";
 
 const LOCALES = [
-  { code: "it", label: "IT", flag: "🇮🇹" },
-  { code: "en", label: "EN", flag: "🇬🇧" },
-  { code: "de", label: "DE", flag: "🇩🇪" },
+  { code: "it", label: "IT" },
+  { code: "en", label: "EN" },
+  { code: "de", label: "DE" },
 ] as const;
 
 export default function Navbar() {
   const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Strip locale prefix from pathname to get the raw path
   const rawPath = pathname.replace(`/${locale}`, "") || "/";
 
-  // Build a locale-prefixed link
   const lp = (path: string) => `/${locale}${path === "/" ? "" : path}`;
 
   const navLinks = [
-    { key: "experiences", path: "/#esperienze" },
-    { key: "courses", path: "/courses" },
-    { key: "prices", path: "/prices" },
-    { key: "safety", path: "/safety" },
-    { key: "gallery", path: "/gallery" },
-    { key: "faq", path: "/faq" },
+    { key: "experiences", href: "/#esperienze" },
+    { key: "offers", href: "#preventivi" },
+    { key: "safety", href: "/safety" },
+    { key: "gallery", href: "/gallery" },
+    { key: "faq", href: "/faq" },
+    { key: "contact", href: "/contact" },
   ] as const;
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100">
-        <nav className="flex justify-between items-center px-5 md:px-16 h-16 md:h-24 w-full max-w-[1440px] mx-auto">
-          {/* Logo */}
-          <Link
-            href={`/${locale}`}
-            className="text-xl md:text-2xl font-serif font-bold tracking-tighter text-[#000d22]"
-          >
-            Diving Chia
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 h-[148px] flex items-center transition-all duration-300"
+        style={{
+          backgroundColor: scrolled ? "#FAFAF8" : "transparent",
+          borderBottom: scrolled ? "1px solid rgba(0,0,0,0.08)" : "1px solid transparent",
+        }}
+      >
+        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 lg:px-8">
+          <Link href={lp("/")} className="flex items-center">
+            <img
+              src={scrolled ? "/images/logo-dark.png" : "/images/logo-white.png"}
+              alt="Diving Center Chia - Bad Boy of Sardinia"
+              className="h-[120px] md:h-[140px] w-auto transition-opacity duration-300"
+              style={{ objectFit: "contain" }}
+            />
           </Link>
 
-          {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
+          <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
               <Link
-                key={link.path}
-                href={lp(link.path)}
-                className="font-serif text-[11px] tracking-[0.15em] uppercase text-slate-500 hover:text-[#000d22] transition-colors duration-300"
+                key={link.href}
+                href={lp(link.href)}
+                className="font-jost text-[13px] font-light uppercase tracking-[0.08em] transition-colors duration-300 hover:text-[#C9A84C]"
+                style={{ color: scrolled ? "#1a1a1a" : "#FAFAF8" }}
               >
                 {t(link.key)}
               </Link>
             ))}
           </div>
 
-          {/* Right side: lang switcher + Book Now */}
-          <div className="hidden lg:flex items-center gap-4">
-            {/* Language switcher */}
-            <div className="flex items-center gap-1">
-              {LOCALES.map(({ code, label }) => (
-                <Link
-                  key={code}
-                  href={`/${code}${rawPath === "/" ? "" : rawPath}`}
-                  className={`font-serif text-[11px] tracking-widest px-1.5 py-0.5 transition-colors ${
-                    locale === code
-                      ? "text-[#000d22] font-bold border-b border-[#000d22]"
-                      : "text-slate-400 hover:text-[#000d22]"
-                  }`}
-                >
-                  {label}
-                </Link>
-              ))}
-            </div>
-
-            <a
-              href={getWhatsAppLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#0a2342] text-white px-7 py-3 font-serif text-[11px] tracking-[0.12em] uppercase hover:opacity-80 transition-opacity whitespace-nowrap"
+          <div className="hidden items-center gap-4 md:flex">
+            {LOCALES.map((l) => (
+              <Link
+                key={l.code}
+                href={`/${l.code}${rawPath === "/" ? "" : rawPath}`}
+                className="font-jost text-[12px] font-light uppercase tracking-[0.08em] transition-colors duration-300"
+                style={{ color: locale === l.code ? "#C9A84C" : scrolled ? "#1a1a1a" : "#FAFAF8" }}
+              >
+                {l.label}
+              </Link>
+            ))}
+            <Link
+              href={lp("/contact")}
+              className="font-jost text-[12px] font-normal uppercase tracking-[0.15em] px-8 py-3 border transition-colors duration-300"
+              style={{
+                borderColor: scrolled ? "#1a1a1a" : "#FAFAF8",
+                color: scrolled ? "#1a1a1a" : "#FAFAF8",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = scrolled ? "#1a1a1a" : "#FAFAF8";
+                e.currentTarget.style.color = scrolled ? "#FAFAF8" : "#0D1B2A";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                e.currentTarget.style.color = scrolled ? "#1a1a1a" : "#FAFAF8";
+              }}
             >
-              {t("bookNow")}
-            </a>
+              {t("book")}
+            </Link>
           </div>
 
-          {/* Mobile hamburger */}
           <button
-            className="flex flex-col gap-1.5 lg:hidden"
+            className="flex flex-col gap-1.5 md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span className="block h-px w-6 bg-[#000d22]" />
-            <span className="block h-px w-6 bg-[#000d22]" />
-            <span className="block h-px w-6 bg-[#000d22]" />
+            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: scrolled || menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
+            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: scrolled || menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
+            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: scrolled || menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
           </button>
-        </nav>
-      </header>
+        </div>
+      </nav>
 
-      {/* Mobile overlay */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 bg-white">
-          <button
-            className="absolute top-7 right-6 text-3xl text-[#000d22] leading-none"
-            onClick={() => setMenuOpen(false)}
-            aria-label="Close menu"
-          >
-            ×
-          </button>
+      <div
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 transition-all duration-300 ${
+          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        style={{ backgroundColor: "#FAFAF8" }}
+      >
+        <button
+          onClick={() => setMenuOpen(false)}
+          className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center"
+          aria-label="Chiudi menu"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="2" y1="2" x2="18" y2="18" stroke="#1a1a1a" strokeWidth="1.5" />
+            <line x1="18" y1="2" x2="2" y2="18" stroke="#1a1a1a" strokeWidth="1.5" />
+          </svg>
+        </button>
+
+        <img
+          src="/images/logo-hero.png"
+          alt="Diving Center Chia - Bad Boy of Sardinia"
+          className="h-[120px] w-auto mb-4"
+          style={{ objectFit: "contain" }}
+        />
+
+        {navLinks.map((link, i) => (
           <Link
-            href={`/${locale}`}
-            className="text-2xl font-serif font-bold tracking-tighter text-[#000d22] mb-2"
+            key={link.href}
+            href={lp(link.href)}
+            className="font-jost text-[18px] font-light uppercase tracking-[0.1em]"
+            style={{ color: "#1a1a1a", animationDelay: `${i * 0.08}s` }}
             onClick={() => setMenuOpen(false)}
           >
-            Diving Chia
+            {t(link.key)}
           </Link>
-          {navLinks.map((link) => (
+        ))}
+
+        <div className="flex items-center gap-4 mt-2">
+          {LOCALES.map((l) => (
             <Link
-              key={link.path}
-              href={lp(link.path)}
-              className="font-serif text-sm tracking-[0.15em] uppercase text-slate-600 hover:text-[#000d22]"
+              key={l.code}
+              href={`/${l.code}${rawPath === "/" ? "" : rawPath}`}
+              className="font-jost text-[14px] font-light uppercase tracking-[0.08em]"
+              style={{ color: locale === l.code ? "#C9A84C" : "#1a1a1a" }}
               onClick={() => setMenuOpen(false)}
             >
-              {t(link.key)}
+              {l.label}
             </Link>
           ))}
-
-          {/* Mobile language switcher */}
-          <div className="flex items-center gap-3 mt-4 pt-4 border-t border-slate-100 w-32 justify-center">
-            {LOCALES.map(({ code, label, flag }) => (
-              <Link
-                key={code}
-                href={`/${code}${rawPath === "/" ? "" : rawPath}`}
-                className={`font-serif text-sm tracking-widest transition-colors flex items-center gap-1 ${
-                  locale === code
-                    ? "text-[#000d22] font-bold"
-                    : "text-slate-400 hover:text-[#000d22]"
-                }`}
-                onClick={() => setMenuOpen(false)}
-              >
-                <span>{flag}</span>
-                <span>{label}</span>
-              </Link>
-            ))}
-          </div>
-
-          <a
-            href={getWhatsAppLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 bg-[#0a2342] text-white px-10 py-4 font-serif text-xs tracking-[0.12em] uppercase"
-            onClick={() => setMenuOpen(false)}
-          >
-            {t("bookNow")}
-          </a>
         </div>
-      )}
+
+        <Link
+          href={lp("/contact")}
+          className="mt-4 font-jost text-[12px] font-normal uppercase tracking-[0.15em] px-10 py-4"
+          style={{ backgroundColor: "#0D1B2A", color: "#FAFAF8" }}
+          onClick={() => setMenuOpen(false)}
+        >
+          {t("book")}
+        </Link>
+      </div>
     </>
   );
 }
