@@ -180,5 +180,46 @@
     },
     "phone": "+39 338 858 5504",
     "whatsappAria": "Kontakt \u00fcber WhatsApp"
+  },
+  "galleryPage": {
+    "eyebrow": "Momente",
+    "title": "Galerie",
+    "subtitle": "Bilder aus unseren Abenteuern im Meer S\u00fcdsardiniens. Jede Aufnahme erz\u00e4hlt eine Geschichte, die einen Tauchgang wert ist.",
+    "filterAll": "Alle",
+    "altPrefix": "Diving-Chia-Foto",
+    "captionLabel": "Bildunterschrift",
+    "closeLabel": "Schlie\u00dfen",
+    "prevLabel": "Vorheriges Foto",
+    "nextLabel": "N\u00e4chstes Foto",
+    "categories": {
+      "avventure-sub": {
+        "label": "Tauchabenteuer",
+        "tagline": "Wenn das Blau zu deinem Himmel wird."
+      },
+      "vita-marina": {
+        "label": "Meereswelt",
+        "tagline": "Das Mittelmeer, wie du es nicht erwartest."
+      },
+      "volti-del-blu": {
+        "label": "Gesichter des Blaus",
+        "tagline": "Blicke, die das Meer nie vergisst."
+      },
+      "primi-respiri": {
+        "label": "Erste Atemz\u00fcge",
+        "tagline": "Der Moment, in dem sich alles ver\u00e4ndert."
+      },
+      "relitti-tesori": {
+        "label": "Wracks & Sch\u00e4tze",
+        "tagline": "Geschichte, die unter den Wellen schl\u00e4ft."
+      },
+      "vita-di-bordo": {
+        "label": "Bordleben",
+        "tagline": "Alles beginnt mit einem L\u00e4cheln am Ufer."
+      },
+      "sardegna-selvaggia": {
+        "label": "Wildes Sardinien",
+        "tagline": "Wo das Blau niemals endet."
+      }
+    }
   }
 }

@@ -180,5 +180,46 @@
     },
     "phone": "+39 338 858 5504",
     "whatsappAria": "Contact on WhatsApp"
+  },
+  "galleryPage": {
+    "eyebrow": "Moments",
+    "title": "Gallery",
+    "subtitle": "Pictures from our adventures in the sea of South Sardinia. Every shot tells a story worth a dive.",
+    "filterAll": "All",
+    "altPrefix": "Diving Chia photo",
+    "captionLabel": "Caption",
+    "closeLabel": "Close",
+    "prevLabel": "Previous photo",
+    "nextLabel": "Next photo",
+    "categories": {
+      "avventure-sub": {
+        "label": "Diving Adventures",
+        "tagline": "When the blue becomes your sky."
+      },
+      "vita-marina": {
+        "label": "Marine Life",
+        "tagline": "The Mediterranean you don't imagine."
+      },
+      "volti-del-blu": {
+        "label": "Faces of the Blue",
+        "tagline": "Looks the sea never forgets."
+      },
+      "primi-respiri": {
+        "label": "First Breaths",
+        "tagline": "The moment when everything changes."
+      },
+      "relitti-tesori": {
+        "label": "Wrecks & Treasures",
+        "tagline": "History sleeping under the waves."
+      },
+      "vita-di-bordo": {
+        "label": "Life On Board",
+        "tagline": "It all starts with a smile at the shore."
+      },
+      "sardegna-selvaggia": {
+        "label": "Wild Sardinia",
+        "tagline": "Where the blue never ends."
+      }
+    }
   }
 }

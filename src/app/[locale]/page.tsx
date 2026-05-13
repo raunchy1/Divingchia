@@ -108,7 +108,7 @@ export default function HomePage() {
           className="absolute inset-0 min-h-[100dvh] min-w-[100dvw] object-cover object-center"
           style={{ zIndex: 1 }}
         >
-          <source src="/videos/whatsapp-video.mp4" type="video/mp4" />
+          <source src="/videos/diving_chia_hero_FINAL.mp4" type="video/mp4" />
         </video>
         <div
           className="absolute inset-0"

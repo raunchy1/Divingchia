@@ -102,3 +102,27 @@ input, select, textarea {
 ::-webkit-scrollbar-thumb:hover {
   background: #C9A84C;
 }
+
+/* Gallery: hide horizontal scrollbar on filter strip */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Opt-out of the global `min-h:44px` rule on mobile for masonry tiles & filter
+   chips, otherwise the buttons inflate and break the layout. */
+.gallery-tile,
+.gallery-chip {
+  display: block;
+}
+@media (max-width: 767px) {
+  .gallery-tile {
+    min-height: 0 !important;
+    display: block !important;
+  }
+}

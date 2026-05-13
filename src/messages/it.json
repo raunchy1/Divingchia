@@ -180,5 +180,46 @@
     },
     "phone": "+39 338 858 5504",
     "whatsappAria": "Contatta su WhatsApp"
+  },
+  "galleryPage": {
+    "eyebrow": "Momenti",
+    "title": "Galleria",
+    "subtitle": "Immagini dalle nostre avventure nel mare della Sardegna del Sud. Ogni scatto, una storia che vale un'immersione.",
+    "filterAll": "Tutte",
+    "altPrefix": "Foto Diving Chia",
+    "captionLabel": "Didascalia",
+    "closeLabel": "Chiudi",
+    "prevLabel": "Foto precedente",
+    "nextLabel": "Foto successiva",
+    "categories": {
+      "avventure-sub": {
+        "label": "Avventure Sub",
+        "tagline": "Quando il blu diventa il tuo cielo."
+      },
+      "vita-marina": {
+        "label": "Vita Marina",
+        "tagline": "Il Mediterraneo che non immagini."
+      },
+      "volti-del-blu": {
+        "label": "Volti del Blu",
+        "tagline": "Sguardi che il mare non dimentica."
+      },
+      "primi-respiri": {
+        "label": "Primi Respiri",
+        "tagline": "Il momento in cui tutto cambia."
+      },
+      "relitti-tesori": {
+        "label": "Relitti & Tesori",
+        "tagline": "Storia che dorme sotto le onde."
+      },
+      "vita-di-bordo": {
+        "label": "Vita di Bordo",
+        "tagline": "Tutto inizia con un sorriso a riva."
+      },
+      "sardegna-selvaggia": {
+        "label": "Sardegna Selvaggia",
+        "tagline": "Dove il blu non finisce mai."
+      }
+    }
   }
 }
