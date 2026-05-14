@@ -42,14 +42,16 @@ export default function Navbar() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 h-[156px] md:h-[140px] lg:h-[156px] flex items-center transition-all duration-300"
         style={{
-          backgroundColor: scrolled ? "#FAFAF8" : "transparent",
-          borderBottom: scrolled ? "1px solid rgba(0,0,0,0.08)" : "1px solid transparent",
+          backgroundColor: scrolled ? "rgba(13,27,42,0.95)" : "transparent",
+          backdropFilter: scrolled ? "blur(8px)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(8px)" : "none",
+          borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
         }}
       >
         <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 lg:px-8">
           <Link href={lp("/")} className="flex items-center">
             <img
-              src={scrolled ? "/images/logo-dark.png" : "/images/logo-white.png"}
+              src="/images/logo-white.png"
               alt="Diving Center Chia - Bad Boy of Sardinia"
               className="h-[144px] md:h-[128px] lg:h-[148px] w-auto transition-opacity duration-300"
               style={{ objectFit: "contain" }}
@@ -62,7 +64,7 @@ export default function Navbar() {
                 key={link.href}
                 href={lp(link.href)}
                 className="font-jost text-[13px] font-light uppercase tracking-[0.08em] transition-colors duration-300 hover:text-[#C9A84C]"
-                style={{ color: scrolled ? "#1a1a1a" : "#FAFAF8" }}
+                style={{ color: "#FAFAF8" }}
               >
                 {t(link.key)}
               </Link>
@@ -75,7 +77,7 @@ export default function Navbar() {
                 key={l.code}
                 href={`/${l.code}${rawPath === "/" ? "" : rawPath}`}
                 className="font-jost text-[12px] font-light uppercase tracking-[0.08em] transition-colors duration-300"
-                style={{ color: locale === l.code ? "#C9A84C" : scrolled ? "#1a1a1a" : "#FAFAF8" }}
+                style={{ color: locale === l.code ? "#C9A84C" : "#FAFAF8" }}
               >
                 {l.label}
               </Link>
@@ -84,16 +86,16 @@ export default function Navbar() {
               href={lp("/contact")}
               className="font-jost text-[12px] font-normal uppercase tracking-[0.15em] px-8 py-3 border transition-colors duration-300"
               style={{
-                borderColor: scrolled ? "#1a1a1a" : "#FAFAF8",
-                color: scrolled ? "#1a1a1a" : "#FAFAF8",
+                borderColor: "#FAFAF8",
+                color: "#FAFAF8",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = scrolled ? "#1a1a1a" : "#FAFAF8";
-                e.currentTarget.style.color = scrolled ? "#FAFAF8" : "#0D1B2A";
+                e.currentTarget.style.backgroundColor = "#FAFAF8";
+                e.currentTarget.style.color = "#0D1B2A";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.color = scrolled ? "#1a1a1a" : "#FAFAF8";
+                e.currentTarget.style.color = "#FAFAF8";
               }}
             >
               {t("book")}
@@ -105,9 +107,9 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: scrolled || menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
-            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: scrolled || menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
-            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: scrolled || menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
+            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
+            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
+            <span className="block h-px w-6 transition-colors" style={{ backgroundColor: menuOpen ? "#1a1a1a" : "#FAFAF8" }} />
           </button>
         </div>
       </nav>

@@ -105,7 +105,7 @@ export default function HomePage() {
         />
         <video
           autoPlay muted loop playsInline
-          className="absolute inset-0 min-h-[100dvh] min-w-[100dvw] object-cover object-center"
+          className="absolute inset-0 h-full w-full object-contain object-top md:object-cover md:object-center"
           style={{ zIndex: 1 }}
         >
           <source src="/videos/diving_chia_hero_FINAL.mp4" type="video/mp4" />
