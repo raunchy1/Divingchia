@@ -96,7 +96,7 @@ export default function GalleryClient({ labels, categoryLabels }: GalleryClientP
     <>
       {/* Category filter — horizontally scrollable on mobile */}
       <section
-        className="sticky top-[132px] z-30 border-b md:top-[124px] lg:top-[148px]"
+        className="sticky top-[156px] z-30 border-b md:top-[140px] lg:top-[156px]"
         style={{
           backgroundColor: "#0D1B2A",
           borderColor: "rgba(201, 168, 76, 0.15)",
