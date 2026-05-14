@@ -17,7 +17,7 @@ export default function SnorkelingTeuladaPage() {
       <Navbar />
 
       <section
-        className="flex min-h-[70vh] items-center px-8 pb-16 pt-24 md:pt-32 md:px-6 md:px-16 lg:px-20"
+        className="flex min-h-[70vh] items-center px-8 pb-16 pt-44 md:pt-40 lg:pt-44 md:px-6 md:px-16 lg:px-20"
         style={{ backgroundColor: "#0D1B2A" }}
       >
         <div className="mx-auto w-full max-w-[1200px]">
