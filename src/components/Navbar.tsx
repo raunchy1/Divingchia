@@ -40,7 +40,9 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 h-[156px] md:h-[140px] lg:h-[156px] flex items-center transition-all duration-300"
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center transition-all duration-300 ${
+          scrolled ? "h-[64px] md:h-[68px]" : "h-[156px] md:h-[140px] lg:h-[156px]"
+        }`}
         style={{
           backgroundColor: scrolled ? "rgba(13,27,42,0.95)" : "transparent",
           backdropFilter: scrolled ? "blur(8px)" : "none",
@@ -53,7 +55,11 @@ export default function Navbar() {
             <img
               src="/images/logo-white.png"
               alt="Diving Center Chia - Bad Boy of Sardinia"
-              className="h-[144px] md:h-[128px] lg:h-[148px] w-auto transition-opacity duration-300"
+              className={`w-auto transition-all duration-300 ${
+                scrolled
+                  ? "h-[48px] md:h-[52px]"
+                  : "h-[144px] md:h-[128px] lg:h-[148px]"
+              }`}
               style={{ objectFit: "contain" }}
             />
           </Link>
