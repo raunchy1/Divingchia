@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
+import HomeButton from '@/components/HomeButton';
 import '../globals.css';
 
 export const dynamic = 'force-static';
@@ -49,6 +50,7 @@ export default async function LocaleLayout({
       <body className="font-jost font-light antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <HomeButton />
         </NextIntlClientProvider>
       </body>
     </html>
