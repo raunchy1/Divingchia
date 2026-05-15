@@ -328,16 +328,30 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Map Placeholder */}
-                <div
-                  className="h-[300px] w-full"
-                  style={{ backgroundColor: "#E5E3DE" }}
-                >
-                  <div className="flex h-full w-full items-center justify-center">
-                    <span className="font-jost text-[13px] font-light uppercase tracking-[0.1em]" style={{ color: "#9a9a9a" }}>
-                      Mappa — Chia, Sardegna
-                    </span>
-                  </div>
+                {/* Map — Chia, Sardegna */}
+                <div className="w-full overflow-hidden" style={{ border: "1px solid #E5E3DE" }}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.5!2d8.9283656!3d38.9311547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e6ddd752aa2703%3A0xc6a4af58b6eced96!2sDiving+Center+Chia!5e0!3m2!1sen!2sit!4v1715270400000!5m2!1sen!2sit"
+                    width="100%"
+                    className="h-[300px] md:h-[360px]"
+                    style={{ border: 0, display: "block", filter: "grayscale(20%) contrast(1.05)" }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Diving Center Chia — Mappa"
+                  />
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=Diving+Center+Chia,+Sud+Sardegna,+Italia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 border-t bg-white px-4 py-3 font-jost text-[12px] font-normal uppercase tracking-[0.15em] transition-colors duration-200 hover:bg-[#0D1B2A] hover:text-[#FAFAF8]"
+                    style={{ borderColor: "#E5E3DE", color: "#1a1a1a" }}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+                    </svg>
+                    Apri in Google Maps
+                  </a>
                 </div>
               </div>
             </ScrollReveal>
