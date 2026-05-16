@@ -41,7 +41,7 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 flex items-center transition-all duration-300 ${
-          scrolled ? "h-[64px] md:h-[68px]" : "h-[156px] md:h-[140px] lg:h-[156px]"
+          scrolled ? "h-[64px] md:h-[68px]" : "h-[80px] md:h-[90px]"
         }`}
         style={{
           backgroundColor: scrolled ? "rgba(13,27,42,0.95)" : "transparent",
@@ -51,17 +51,12 @@ export default function Navbar() {
         }}
       >
         <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 lg:px-8">
-          <Link href={lp("/")} className="flex items-center">
-            <img
-              src="/images/logo-white.png"
-              alt="Diving Center Chia - Bad Boy of Sardinia"
-              className={`w-auto transition-all duration-300 ${
-                scrolled
-                  ? "h-[48px] md:h-[52px]"
-                  : "h-[144px] md:h-[128px] lg:h-[148px]"
-              }`}
-              style={{ objectFit: "contain" }}
-            />
+          <Link
+            href={lp("/")}
+            className="font-jost text-xl font-semibold tracking-widest uppercase"
+            style={{ color: "#FAFAF8" }}
+          >
+            Diving Chia
           </Link>
 
           <div className="hidden items-center gap-8 md:flex">
@@ -137,12 +132,14 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <img
-          src="/images/logo-hero.png"
-          alt="Diving Center Chia - Bad Boy of Sardinia"
-          className="h-[80px] w-auto mb-4"
-          style={{ objectFit: "contain" }}
-        />
+        <Link
+          href={lp("/")}
+          className="font-jost text-2xl font-semibold tracking-widest uppercase mb-4"
+          style={{ color: "#0D1B2A" }}
+          onClick={() => setMenuOpen(false)}
+        >
+          Diving Chia
+        </Link>
 
         {navLinks.map((link, i) => (
           <Link
