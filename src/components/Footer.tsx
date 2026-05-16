@@ -33,14 +33,15 @@ export default function Footer() {
 
       <div className="mx-auto max-w-[1200px] px-6 lg:px-8 pt-20 pb-12">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          {/* Left column - Logo */}
+          {/* Left column - Brand name */}
           <div className="flex flex-col gap-4 items-start">
-            <img
-              src="/images/logo-footer-white.png"
-              alt="Diving Center Chia - Bad Boy of Sardinia"
-              className="h-[140px] w-auto"
-              style={{ objectFit: "contain" }}
-            />
+            <Link
+              href={`/${locale}`}
+              className="font-jost text-2xl font-semibold tracking-widest uppercase"
+              style={{ color: "#FAFAF8" }}
+            >
+              Diving Chia
+            </Link>
             <p className="font-jost text-[14px] font-light" style={{ color: "#FAFAF8" }}>
               {t("tagline")}
             </p>
